@@ -16,6 +16,10 @@ const Routers = () => {
       <Route path="/Login">
         <Login />
       </Route>
+      <Route path="/Adote"></Route>
+      <Route path="/Doe-um-pet"></Route>
+      <Route path="/Pet/:name"></Route>
+      <Route path="/Dashboard"></Route>
     </Switch>
   );
 };
