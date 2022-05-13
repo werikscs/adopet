@@ -1,9 +1,10 @@
 import Card from "../../components/Card";
+import SectionHomePart3 from "../../components/section-Home-Part3";
 
 const Home = () => {
   return (
     <>
-      <Card />
+      <SectionHomePart3 />
     </>
   );
 };
