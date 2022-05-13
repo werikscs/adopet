@@ -1,7 +1,6 @@
 import { LiCard } from "./style";
 import iconMacho from "../../assets/macho.svg";
 import iconFemea from "../../assets/femea.svg";
-// import test from "../../assets/img.png";
 
 const Card = ({ pets }) => {
   const { name, sex, size, img } = pets;
