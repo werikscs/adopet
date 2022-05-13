@@ -1,18 +1,17 @@
 import { LiCard } from "./style";
 import iconMacho from "../../assets/macho.svg";
 import iconFemea from "../../assets/femea.svg";
-// import test from "../../assets/img.png";
 
-const Card = ({ pets }) => {
+const Card = ({ pets, isAdote = false }) => {
   const { name, sex, size, img } = pets;
   return (
-    <LiCard>
+    <LiCard isAdote={isAdote}>
       <img src={img} alt={name} />
       <div>
         <h3>
           {name} <img src={sex === "m" ? iconMacho : iconFemea} alt="sexo" />
         </h3>
-        <span>Porte {size}</span>
+        <h4>Porte {size}</h4>
       </div>
     </LiCard>
   );
