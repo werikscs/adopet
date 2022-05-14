@@ -63,7 +63,11 @@ const PagePet = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
             hendrerit massa ipsum, nec aliquet ante varius non. Lorem ipsum
             dolor sit amet, consectetur adipiscing elit. Quisque hendrerit massa
-            ipsum, nec aliquet ante varius non.Lorem ipsum dolor sit am
+            ipsum, nec aliquet ante varius non.Lorem ipsum dolor sit am Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit
+            massa ipsum, nec aliquet ante varius non. Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit. Quisque hendrerit massa ipsum,
+            nec aliquet ante varius non.Lorem ipsum dolor sit am
           </span>
         </DivInfoPet>
 

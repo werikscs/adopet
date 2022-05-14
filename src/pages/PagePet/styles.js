@@ -15,6 +15,8 @@ export const Main = styled.main`
   max-width: 768px;
   min-width: var(--min-width);
 
+  position: relative;
+
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -31,6 +33,7 @@ export const Figcaption = styled.figcaption`
     display: block;
 
     width: 100%;
+    max-width: 768px;
 
     object-fit: cover;
 
@@ -95,6 +98,8 @@ export const DivInfoPet = styled.div`
   flex-direction: column;
   gap: 14px;
 
+  margin-bottom: 56px;
+
   span {
     font-size: 1rem;
   }
@@ -103,6 +108,16 @@ export const DivInfoPet = styled.div`
 export const DivButtons = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  padding: 16px;
+
+  width: 100%;
+  max-width: 768px;
 
   background-color: var(--color-second-50);
 `;
