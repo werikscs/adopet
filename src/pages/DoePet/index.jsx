@@ -1,53 +1,94 @@
-import { useState } from "react";
 import { useHistory } from "react-router-dom";
+
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm } from "react-hook-form";
+
+import api from "../../services/api";
+
 import Button from "../../components/Button";
 import ButtonOutlined from "../../components/ButtonOutlined";
 import InputInternal from "../../components/InputInternal";
-import {
-  DivButtons,
-  DivTextArea,
-  Form,
-  GenericContainer,
-  Main,
-} from "./styles";
+
+import * as S from "./styles";
+import InputTextArea from "../../components/InputTextArea";
 
 const DoePet = () => {
   const history = useHistory();
 
-  const [textArea, setTextArea] = useState(
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit massa ipsum, nec aliquet ante varius non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit massa ipsum, nec aliquet ante varius non.Lorem ipsum dolor sit am Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit massa ipsum, nec aliquet ante varius non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit massa ipsum, nec aliquet ante varius non.Lorem ipsum dolor sit am"
-  );
+  const formSchema = yup.object().shape({
+    name: yup.string().required("Campo Obrigatório!"),
+    img: yup.string().required("Campo Obrigatório!"),
+    moreInfo: yup.string().required("Campo Obrigatório!"),
+    //colocar os selects
+  });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({ resolver: yupResolver(formSchema) });
+
+  const onSubmit = (data) => {
+    console.log(data);
+    // adicionar o userId
+    // chamar registerPet
+  };
+
+  const registerPet = (dataBody) => {
+    api.post("/644/animals", dataBody, {
+      headers: {
+        Authorization: `Bearer ${"token"}`,
+      },
+    });
+  };
 
   return (
-    <GenericContainer>
-      <Main>
+    <S.GenericContainer>
+      <S.Main>
         <h1>Doe um Pet</h1>
 
-        <Form>
-          <InputInternal label="Nome" type="text" placeholder="Nome do Pet" />
+        <S.Form onSubmit={handleSubmit(onSubmit)}>
+          <InputInternal
+            label="Nome"
+            type="text"
+            placeholder="Nome do Pet"
+            name="name"
+            register={register}
+            error={errors.name?.message}
+          />
+          <InputInternal
+            label="Link da imagem"
+            type="text"
+            placeholder="Link"
+            name="img"
+            register={register}
+            error={errors.img?.message}
+          />
 
-          <DivTextArea>
-            <label>Outras Informações</label>
-            <textarea
-              name=""
-              cols="30"
-              rows="10"
-              onChange={(e) => setTextArea(e.target.value)}
-              value={textArea}
-            />
-          </DivTextArea>
+          <InputTextArea
+            cols="30"
+            rows="10"
+            label="Outras informações"
+            placeholder="Conte-nos um pouco mais sobre o seu bichinho."
+            name="moreInfo"
+            register={register}
+            error={errors.moreInfo?.message}
+          />
 
-          <DivButtons>
-            <ButtonOutlined callback={() => console.log("voltar")}>
+          <S.DivButtons>
+            <ButtonOutlined
+              type="button"
+              callback={() => console.log("voltar")}>
               voltar
             </ButtonOutlined>
-            <Button onClick={() => console.log("Registrar")} orangeSchema>
+            <Button type="submit" orangeSchema>
               Registrar
             </Button>
-          </DivButtons>
-        </Form>
-      </Main>
-    </GenericContainer>
+          </S.DivButtons>
+        </S.Form>
+      </S.Main>
+    </S.GenericContainer>
   );
 };
 
