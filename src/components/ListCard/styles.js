@@ -11,11 +11,12 @@ export const Ul = styled.ul`
   flex-direction: "row";
   flex-wrap: ${(props) => (props.isAdote ? "wrap" : "nowrap")};
   align-items: center;
-  justify-content: space-around;
+  justify-content: ${(props) => (props.isAdote ? "space-around" : "stretch")};
   overflow-x: ${(props) => (props.isAdote ? "hidden" : "scroll")};
   overflow-y: ${(props) => (props.isAdote ? "scroll" : "hidden")};
   background-color: var(--color-fourth);
   @media (min-width: 1024px) {
+    justify-content: space-around;
     max-height: none;
     padding: 2%;
     flex-direction: row;
