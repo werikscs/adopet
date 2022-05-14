@@ -1,12 +1,14 @@
 // Input utilizado onde não for login ou cadastro
 
+import SpanError from "../SpanError";
 import { DivInput } from "./styles";
 
-const InputInternal = ({ label, ...rest }) => {
+const InputInternal = ({ label, name, register, error = "", ...rest }) => {
   return (
     <DivInput>
       <label>{label}</label>
-      <input {...rest} />
+      <input {...register(name)} {...rest} />
+      {error && <SpanError message={error} />}
     </DivInput>
   );
 };
