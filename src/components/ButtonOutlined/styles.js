@@ -10,5 +10,7 @@ export const Button = styled.button`
   border: 2px solid var(--color-first);
   border-radius: 8px;
 
+  height: 40px;
+
   padding: 4px 16px;
 `;
