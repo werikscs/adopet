@@ -11,64 +11,77 @@ import {
   DivInfoUser,
   DivButtons,
 } from "./styles";
+import { useParams } from "react-router-dom";
+import api from "../../services/api";
+import { useEffect } from "react";
+import { useState } from "react";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const PagePet = () => {
+  const [dataPet, setDataPet] = useState({});
+  const [dataOwner, setDataOwner] = useState({});
+
+  const params = useParams();
+  const history = useHistory();
+
+  const getAnimalById = (id) => {
+    api.get(`/644/animals/${id}`).then((res) => setDataPet(res.data));
+  };
+
+  const getUserById = (userId) => {
+    api.get(`/644/users/${userId}`).then((res) => setDataOwner(res.data));
+  };
+
+  useEffect(() => {
+    getAnimalById(params.id);
+  }, []);
+
+  useEffect(() => {
+    if (dataPet.userId) getUserById(dataPet.userId);
+  });
+
   return (
     <GenericContainer>
       <Main>
         {/* imagem grande do animal */}
         <Figcaption>
-          <img
-            src="https://uploaddeimagens.com.br/images/003/866/666/original/cao1_1.png"
-            alt=""
-          />
+          <img src={dataPet.img} alt="" />
         </Figcaption>
 
         {/* outras imagens do animal */}
         <DivMoreImgs>
-          <img
-            src="https://uploaddeimagens.com.br/images/003/866/666/original/cao1_1.png"
-            alt=""
-          />
-          <img
-            src="https://uploaddeimagens.com.br/images/003/866/666/original/cao1_1.png"
-            alt=""
-          />
-          <img
-            src="https://uploaddeimagens.com.br/images/003/866/666/original/cao1_1.png"
-            alt=""
-          />
-          <img
-            src="https://uploaddeimagens.com.br/images/003/866/666/original/cao1_1.png"
-            alt=""
-          />
+          <img src={dataPet.img} alt="" />
+          <img src={dataPet.img} alt="" />
+          <img src={dataPet.img} alt="" />
+          <img src={dataPet.img} alt="" />
         </DivMoreImgs>
 
         <DivInfoPet>
-          <h1>Fiona</h1>
+          <h1>{dataPet.name}</h1>
 
           <DivInfoUser>
-            <img src={defaultImg} alt="" />
+            <img src={dataOwner.avatar || defaultImg} alt="" />
             <div>
-              <h2>João da Silva</h2>
-              <h3>proprietário</h3>
+              <h5>{dataOwner.name}</h5>
+              <h6>proprietário</h6>
             </div>
           </DivInfoUser>
 
-          <h2>Fêmea</h2>
+          <h2>{dataPet.sex === "m" ? "Macho" : "Fêmea"}</h2>
 
-          <h2>Porte Pequeno</h2>
+          <h2>
+            {dataPet.size === "small"
+              ? "Pequeno"
+              : dataPet.size === "medium"
+              ? "Médio"
+              : "Grande"}
+          </h2>
 
-          <span>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            hendrerit massa ipsum, nec aliquet ante varius non. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Quisque hendrerit massa
-            ipsum, nec aliquet ante varius non.Lorem ipsum dolor sit am
-          </span>
+          <span>{dataPet.moreInfo}</span>
         </DivInfoPet>
 
         <DivButtons>
-          <ButtonOutlined callback={() => console.log("voltar")}>
+          <ButtonOutlined callback={() => history.push("/")}>
             voltar
           </ButtonOutlined>
           <Button onClick={() => console.log("Quero Adotar")} orangeSchema>
