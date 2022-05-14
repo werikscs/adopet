@@ -1,5 +1,8 @@
+import "./styles";
+import { Span } from "./styles";
+
 const SpanError = ({ message }) => {
-  return <span>{message}</span>;
+  return <Span>{message}</Span>;
 };
 
 export default SpanError;

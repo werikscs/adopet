@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SpanError = styled.span`
+export const Span = styled.span`
   color: var(--color-text);
 
   padding-left: 16px;
