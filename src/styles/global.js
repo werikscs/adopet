@@ -7,6 +7,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
     text-decoration: none;
     outline: 0;
+    border: 0;
 }
 
 :root{
@@ -17,6 +18,7 @@ export default createGlobalStyle`
     --input-background-color-tertiary: #fff;
     --color-first: #FF8E15;
     --color-second: #FFEBC5;
+    --color-second-50: #fff9ed;
     --color-third: #FF6853;
     --color-fourth: #ffffff;
     --color-fifth: #C4C4C4;
@@ -26,9 +28,11 @@ export default createGlobalStyle`
     --color-icon-male: #3a0ca3 ;
     --color-icon-female: #b5179e;
     --color-title: #333437;
+    --color-title-50: rgba(51, 52, 55, 0.5);
     --color-text: #606060;
-    --color-title: #333437;
-    --color-text: #606060;
+
+    --max-width: 1440px;
+    --min-width: 360px;
 }
 
 body, input, button{

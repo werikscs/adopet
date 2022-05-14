@@ -11,26 +11,39 @@ import PagePet from "../pages/PagePet";
 const Routers = () => {
   return (
     <Switch>
+      {/* */}
       <Route exact path="/">
         <Home />
       </Route>
-      <Route path="/Cadastro">
+
+      {/*  */}
+      <Route exact path="/cadastro">
         <Cadastro />
       </Route>
-      <Route path="/Login">
+
+      {/*  */}
+      <Route exact path="/login">
         <Login />
       </Route>
-      <Route path="/Adote">
+
+      {/* página com a lista de animais */}
+      <Route exact path="/adote">
         <Adote />
       </Route>
-      <Route path="/Doe-um-pet">
-        <DoePet />
-      </Route>
-      <Route path="/Pet/:name">
+
+      {/* página do detalhe do pet */}
+      <Route exact path="/adote/:id">
         <PagePet />
       </Route>
-      <Route path="/Dashboard">
+
+      {/* página dos pets que o usuário cadastrou na plataforma (somente logado) */}
+      <Route exact path="/user/pets">
         <Dashboard />
+      </Route>
+
+      {/* página com tela de cadastro de animal (somente logado) */}
+      <Route exact path="/user/doe">
+        <DoePet />
       </Route>
     </Switch>
   );
