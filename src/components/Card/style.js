@@ -2,37 +2,41 @@ import styled from "styled-components";
 
 export const LiCard = styled.li`
   list-style: none;
-  width: 280px;
-  height: 325px;
+  width: 290px;
+  height: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  margin: 8px;
+  margin-top: 12px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-color: var(--color-second);
   @media (max-width: 1023px) {
-    width: ${(props) => (props.isAdote ? "140px" : "280px")};
-    height: ${(props) => (props.isAdote ? "200px" : "325px")};
+    width: ${(props) => (props.isAdote ? "134px" : "290px")};
+    height: ${(props) => (props.isAdote ? "200px" : "320px")};
+    margin-left: ${(props) => (props.isAdote ? "0" : "10px")};
+  }
+  @media (min-width: 1024px) {
+    margin: 1%;
   }
 
   > img {
-    width: 280px;
-    height: 250px;
+    width: 290px;
+    height: 275px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     @media (max-width: 1023px) {
-      width: ${(props) => (props.isAdote ? "140px" : "280px")};
-      height: ${(props) => (props.isAdote ? "170px" : "250px")};
+      width: ${(props) => (props.isAdote ? "134px" : "290px")};
+      height: ${(props) => (props.isAdote ? "170px" : "275px")};
     }
   }
 
   > div {
     position: relative;
-    top: -45px;
-    width: 280px;
-    height: 150px;
+    top: -40px;
+    width: 290px;
+    height: 105px;
     background-color: var(--color-second);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -43,9 +47,9 @@ export const LiCard = styled.li`
     border-top-left-radius: 60%;
     border-top-right-radius: 60%;
     @media (max-width: 1023px) {
-      width: ${(props) => (props.isAdote ? "140px" : "280px")};
-      height: ${(props) => (props.isAdote ? "80px" : "150px")};
-      top: ${(props) => (props.isAdote ? "-25px" : "-45px")};
+      width: ${(props) => (props.isAdote ? "134px" : "290px")};
+      height: ${(props) => (props.isAdote ? "80px" : "105px")};
+      top: ${(props) => (props.isAdote ? "-25px" : "-40px")};
     }
 
     h3 {

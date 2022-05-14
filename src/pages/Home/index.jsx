@@ -1,10 +1,31 @@
-import Card from "../../components/Card";
+import { useEffect } from "react";
+import { useState } from "react";
+import ListCard from "../../components/ListCard";
 import SectionHomePart3 from "../../components/section-Home-Part3";
+import api from "../../services/api";
+import { ContainerListPets } from "./styles";
 
 const Home = () => {
+  useEffect(() => {
+    getListPets();
+  }, []);
+
+  const getListPets = () => {
+    api.get(`/animals?_page=1&_limit=9`).then((res) => {
+      console.log(res.data);
+      setlistPet(res.data);
+    });
+  };
+
+  const [listPet, setlistPet] = useState([]);
+
   return (
     <>
       <SectionHomePart3 />
+      <ContainerListPets>
+        <h2>Animais em Destaque</h2>
+        <ListCard listPets={listPet} />
+      </ContainerListPets>
     </>
   );
 };
