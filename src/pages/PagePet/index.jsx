@@ -1,21 +1,15 @@
-import defaultImg from "../../assets/proprietario-default-img.svg";
-import ButtonOutlined from "../../components/ButtonOutlined";
-import Button from "../../components/Button";
-
-import {
-  GenericContainer,
-  Main,
-  Figcaption,
-  DivMoreImgs,
-  DivInfoPet,
-  DivInfoUser,
-  DivButtons,
-} from "./styles";
-import { useParams } from "react-router-dom";
-import api from "../../services/api";
 import { useEffect } from "react";
 import { useState } from "react";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+
+import { useParams, useHistory } from "react-router-dom";
+
+import api from "../../services/api";
+
+import defaultImg from "../../assets/proprietario-default-img.svg";
+
+import ButtonOutlined from "../../components/ButtonOutlined";
+import Button from "../../components/Button";
+import * as S from "./styles";
 
 const PagePet = () => {
   const [dataPet, setDataPet] = useState({});
@@ -41,31 +35,31 @@ const PagePet = () => {
   });
 
   return (
-    <GenericContainer>
-      <Main>
+    <S.GenericContainer>
+      <S.Main>
         {/* imagem grande do animal */}
-        <Figcaption>
+        <S.Figcaption>
           <img src={dataPet.img} alt="" />
-        </Figcaption>
+        </S.Figcaption>
 
         {/* outras imagens do animal */}
-        <DivMoreImgs>
+        <S.DivMoreImgs>
           <img src={dataPet.img} alt="" />
           <img src={dataPet.img} alt="" />
           <img src={dataPet.img} alt="" />
           <img src={dataPet.img} alt="" />
-        </DivMoreImgs>
+        </S.DivMoreImgs>
 
-        <DivInfoPet>
+        <S.DivInfoPet>
           <h1>{dataPet.name}</h1>
 
-          <DivInfoUser>
+          <S.DivInfoUser>
             <img src={dataOwner.avatar || defaultImg} alt="" />
             <div>
               <h5>{dataOwner.name}</h5>
               <h6>proprietário</h6>
             </div>
-          </DivInfoUser>
+          </S.DivInfoUser>
 
           <h2>{dataPet.sex === "m" ? "Macho" : "Fêmea"}</h2>
 
@@ -78,18 +72,18 @@ const PagePet = () => {
           </h2>
 
           <span>{dataPet.moreInfo}</span>
-        </DivInfoPet>
+        </S.DivInfoPet>
 
-        <DivButtons>
+        <S.DivButtons>
           <ButtonOutlined callback={() => history.push("/")}>
             voltar
           </ButtonOutlined>
           <Button onClick={() => console.log("Quero Adotar")} orangeSchema>
             Quero Adotar
           </Button>
-        </DivButtons>
-      </Main>
-    </GenericContainer>
+        </S.DivButtons>
+      </S.Main>
+    </S.GenericContainer>
   );
 };
 
