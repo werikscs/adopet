@@ -4,7 +4,7 @@ export const Ul = styled.ul`
   box-sizing: border-box;
   background-color: var(--color-fifth);
   width: 100%;
-  max-width: 1250px;
+  max-width: 1200px;
   min-height: 400px;
   max-height: 400px;
   display: flex;
