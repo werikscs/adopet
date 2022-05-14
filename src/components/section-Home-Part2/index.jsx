@@ -1,4 +1,4 @@
-import { Container, Content, ContentTitle, Figure } from "./style";
+import { Container, Content, ContentTitle, Figure } from "./styles";
 import girlCat from "../../assets/garota-milenar-feliz-com-cachorro.webp";
 
 const SectionHomePart2 = () => {
