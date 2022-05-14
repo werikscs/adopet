@@ -17,32 +17,32 @@ const Routers = () => {
       </Route>
 
       {/*  */}
-      <Route path="/cadastro">
+      <Route exact path="/cadastro">
         <Cadastro />
       </Route>
 
       {/*  */}
-      <Route path="/login">
+      <Route exact path="/login">
         <Login />
       </Route>
 
       {/* página com a lista de animais */}
-      <Route path="/adote">
+      <Route exact path="/adote">
         <Adote />
       </Route>
 
       {/* página do detalhe do pet */}
-      <Route path="/adote/:id">
+      <Route exact path="/adote/:id">
         <PagePet />
       </Route>
 
       {/* página dos pets que o usuário cadastrou na plataforma (somente logado) */}
-      <Route path="/user/pets">
+      <Route exact path="/user/pets">
         <Dashboard />
       </Route>
 
       {/* página com tela de cadastro de animal (somente logado) */}
-      <Route path="/user/doe">
+      <Route exact path="/user/doe">
         <DoePet />
       </Route>
     </Switch>
