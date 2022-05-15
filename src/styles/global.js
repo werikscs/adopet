@@ -35,7 +35,7 @@ export default createGlobalStyle`
     --min-width: 360px;
 }
 
-body, input, button{
+body, input, button, textarea{
     font-family: 'Hind', sans-serif;
     font-size: 1rem;
 }
