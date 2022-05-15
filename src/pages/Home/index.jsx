@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import Footer from "../../components/Footer";
 import ListCard from "../../components/ListCard";
 import SectionHomePart2 from "../../components/section-Home-Part2";
 import SectionHomePart3 from "../../components/section-Home-Part3";
@@ -30,6 +31,7 @@ const Home = () => {
         <ListCard listPets={listPet} />
       </ContainerListPets>
       <SectionHomePart5 />
+      <Footer />
     </>
   );
 };
