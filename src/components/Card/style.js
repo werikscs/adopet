@@ -12,6 +12,11 @@ export const LiCard = styled.li`
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-color: var(--color-second);
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.75;
+  }
   @media (max-width: 1023px) {
     width: ${(props) => (props.isAdote ? "134px" : "290px")};
     height: ${(props) => (props.isAdote ? "200px" : "320px")};
