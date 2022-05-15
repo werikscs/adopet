@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Footer from "../../components/Footer";
 import ListCard from "../../components/ListCard";
+import SectionHomePart1 from "../../components/section-Home-Part1";
 import SectionHomePart2 from "../../components/section-Home-Part2";
 import SectionHomePart3 from "../../components/section-Home-Part3";
 import SectionHomePart5 from "../../components/section-Home-Part5";
@@ -23,7 +24,8 @@ const Home = () => {
   const [listPet, setlistPet] = useState([]);
 
   return (
-    <>
+    <main>
+      <SectionHomePart1 />
       <SectionHomePart2 />
       <SectionHomePart3 />
       <ContainerListPets>
@@ -32,7 +34,7 @@ const Home = () => {
       </ContainerListPets>
       <SectionHomePart5 />
       <Footer />
-    </>
+    </main>
   );
 };
 
