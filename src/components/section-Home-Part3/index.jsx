@@ -18,8 +18,9 @@ const SectionHomePart3 = () => {
             <img src={house} alt="house" />
           </CircleHowItWork>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            hendrerit massa ipsum, nec aliquet ante varius non.
+            Faça uma busca em nosso espaço dedicado à adoção. Lá você irá
+            conhecer um pouco sobre os pets, para criar a conexão perfeita com
+            cão e/ou gato que busca um novo lar.
           </p>
         </div>
         <div>
@@ -27,8 +28,9 @@ const SectionHomePart3 = () => {
             <img src={cadastro} alt="cadastro" />
           </CircleHowItWork>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            hendrerit massa ipsum, nec aliquet ante varius non.
+            Encontrado o seu futuro pet, você deve preencher o formulário de
+            interesse que disponibilizamos aqui no Adopet, que a ONG/protetor
+            entrará em contato com você.
           </p>
         </div>
         <div>
@@ -36,8 +38,9 @@ const SectionHomePart3 = () => {
             <img src={contato} alt="contato" />
           </CircleHowItWork>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            hendrerit massa ipsum, nec aliquet ante varius non.
+            A ONG/protetor, irá fazer a análise do seu cadastro/perfil vs pet
+            escolhido. Você receberá um feedback por telefone/e-mail caso seja
+            preenchido o formulário.
           </p>
         </div>
         <div>
@@ -45,8 +48,9 @@ const SectionHomePart3 = () => {
             <img src={cachorro} alt="cachorro" />
           </CircleHowItWork>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            hendrerit massa ipsum, nec aliquet ante varius non.
+            Espere o contato. Caso seja aprovado pela ONG/protetor, você poderá
+            levar seu pet para casa! Com tudo certo, você busca seu pet no dia
+            combinado com a ONG/protetor.
           </p>
         </div>
       </ContentHowItWork>
