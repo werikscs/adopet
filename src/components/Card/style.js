@@ -18,8 +18,8 @@ export const LiCard = styled.li`
     opacity: 0.75;
   }
   @media (max-width: 1023px) {
-    width: ${(props) => (props.isAdote ? "134px" : "290px")};
-    height: ${(props) => (props.isAdote ? "200px" : "320px")};
+    width: ${(props) => (props.isAdote ? "134px" : "250px")};
+    height: ${(props) => (props.isAdote ? "200px" : "280px")};
     margin-left: ${(props) => (props.isAdote ? "0" : "10px")};
   }
   @media (min-width: 1024px) {
@@ -31,9 +31,10 @@ export const LiCard = styled.li`
     height: 275px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    object-fit: cover;
     @media (max-width: 1023px) {
-      width: ${(props) => (props.isAdote ? "134px" : "290px")};
-      height: ${(props) => (props.isAdote ? "170px" : "275px")};
+      width: ${(props) => (props.isAdote ? "134px" : "250px")};
+      height: ${(props) => (props.isAdote ? "170px" : "235px")};
     }
   }
 
@@ -52,9 +53,9 @@ export const LiCard = styled.li`
     border-top-left-radius: 60%;
     border-top-right-radius: 60%;
     @media (max-width: 1023px) {
-      width: ${(props) => (props.isAdote ? "134px" : "290px")};
-      height: ${(props) => (props.isAdote ? "80px" : "105px")};
-      top: ${(props) => (props.isAdote ? "-25px" : "-40px")};
+      width: ${(props) => (props.isAdote ? "134px" : "250px")};
+      height: ${(props) => (props.isAdote ? "80px" : "65px")};
+      top: ${(props) => (props.isAdote ? "-25px" : "-30px")};
     }
 
     h3 {
@@ -64,9 +65,9 @@ export const LiCard = styled.li`
       margin-bottom: 0.5rem;
       margin-top: 0.8rem;
       @media (max-width: 1023px) {
-        font-size: ${(props) => (props.isAdote ? "1.2rem" : "1.8rem")};
-        margin-bottom: ${(props) => (props.isAdote ? "0" : "0.5rem")};
-        margin-top: ${(props) => (props.isAdote ? "0" : "0.8rem")};
+        font-size: ${(props) => (props.isAdote ? "1.2rem" : "1.4rem")};
+        margin-bottom: ${(props) => (props.isAdote ? "0" : "0")};
+        margin-top: ${(props) => (props.isAdote ? "0" : "0.6rem")};
       }
 
       > img {
@@ -76,8 +77,8 @@ export const LiCard = styled.li`
         height: 27px;
         @media (max-width: 1023px) {
           margin-left: ${(props) => (props.isAdote ? "0.5rem" : "0.8rem")};
-          heigth: ${(props) => (props.isAdote ? "18px" : "27px")};
-          width: ${(props) => (props.isAdote ? "11px" : "18px")};
+          height: ${(props) => (props.isAdote ? "18px" : "24px")};
+          width: ${(props) => (props.isAdote ? "11px" : "15px")};
         }
       }
     }
@@ -86,8 +87,8 @@ export const LiCard = styled.li`
       font-size: 1.2rem;
       font-weight: 500;
       color: var(--color-title);
-      @media (max-width: 1024px) {
-        font-size: ${(props) => (props.isAdote ? "0.9rem" : "1.2rem")};
+      @media (max-width: 1023px) {
+        font-size: ${(props) => (props.isAdote ? "0.9rem" : "1rem")};
       }
     }
   }
