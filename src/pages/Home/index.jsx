@@ -1,10 +1,16 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import api from "../../services/api";
+
+import Footer from "../../components/Footer";
 import ListCard from "../../components/ListCard";
+
+import SectionHomePart1 from "../../components/section-Home-Part1";
 import SectionHomePart2 from "../../components/section-Home-Part2";
 import SectionHomePart3 from "../../components/section-Home-Part3";
-import api from "../../services/api";
-import { ContainerListPets } from "./styles";
+import SectionHomePart5 from "../../components/section-Home-Part5";
+
+import { ContainerListPets, Main } from "./styles";
 
 const Home = () => {
   useEffect(() => {
@@ -21,14 +27,19 @@ const Home = () => {
   const [listPet, setlistPet] = useState([]);
 
   return (
-    <>
-      <SectionHomePart2/>
+    <Main>
+      <SectionHomePart1 />
+      <SectionHomePart2 />
       <SectionHomePart3 />
       <ContainerListPets>
         <h2>Animais em Destaque</h2>
-        <ListCard listPets={listPet} />
+        <div>
+          <ListCard listPets={listPet} />
+        </div>
       </ContainerListPets>
-    </>
+      <SectionHomePart5 />
+      <Footer />
+    </Main>
   );
 };
 
