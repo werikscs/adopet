@@ -17,7 +17,7 @@ export const ContainerListPets = styled.div`
     font-size: 1.25rem;
     padding-bottom: 16px;
   }
-
+  
   > div {
     background-color: var(--color-fifth);
     width: 100%;
@@ -25,7 +25,6 @@ export const ContainerListPets = styled.div`
     flex-direction: column;
     align-items: center;
   }
-
   @media screen and (min-width: 768px) {
     h2 {
       font-size: 1.6rem;

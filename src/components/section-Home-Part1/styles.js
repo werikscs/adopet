@@ -1,57 +1,101 @@
 import styled from "styled-components";
-import dogHome from "../../assets/dogHome.svg";
 
+export const Section = styled.section`
+  width: 100%;
+  height: 100%;
 
-export const Conteiner = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    height: 430px;
-    display: flex;
-    align-items: stretch;
-    background: #C1C1C1;
-    justify-content: center;
+  position: relative;
 
-`;
+  background-color: var(--color-bg-homept1);
 
-export const Background = styled.div`
+  div {
+    position: absolute;
 
-
-   @media(min-width: 1024px) {
-    flex: 1;
-    background: url(${dogHome}) no-repeat center, #C1C1C1;
-
-    background-size: 750px 435px;
-    
-    max-width: 525px;
-
-}
-`;
-
-export const Contetnt = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
-    width:100%;
+    align-items: center;
+    gap: 16px;
 
-    max-width: 345px;
-    background: #C1C1C1;
+    max-width: 300px;
+
     h1 {
-        font-size: 24px;
-        margin-left: 135px;
+      font-size: 1.25rem;
+      text-align: center;
     }
 
-    @media(min-width: 300px) {
-        h1 {
-            font-size: 19px;
-            margin-left: 0px;
-        }
+    button {
+      font-size: 1.2rem;
+
+      width: 180px;
+      height: 40px;
     }
 
-    @media(min-width: 600px) {
-        h1 {
-            margin-left: 0px;
-        }
+    z-index: 10;
+  }
+
+  figcaption {
+    max-height: 250px;
+
+    img {
+      display: block;
+
+      width: 100%;
+      max-height: 250px;
+
+      object-fit: cover;
+
+      opacity: 0.25;
     }
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 32px;
+    padding-bottom: 0;
+
+    div {
+      position: static;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 16px;
+
+      max-width: 450px;
+
+      h1 {
+        font-size: 1.6rem;
+        text-align: left;
+      }
+
+      button {
+        font-size: 1.65rem;
+
+        width: 230px;
+        height: 50px;
+      }
+
+      z-index: 10;
+    }
+
+    figcaption {
+      max-height: 450px;
+
+      img {
+        display: block;
+
+        width: 100%;
+        max-height: 450px;
+
+        object-fit: cover;
+
+        opacity: 1;
+      }
+    }
+  }
 `;
-
-

@@ -8,6 +8,7 @@ export default createGlobalStyle`
     text-decoration: none;
     outline: 0;
     border: 0;
+    list-style: none;
 }
 
 :root{
@@ -30,6 +31,7 @@ export default createGlobalStyle`
     --color-title: #333437;
     --color-title-50: rgba(51, 52, 55, 0.5);
     --color-text: #606060;
+    --color-bg-homept1: #e0e0e0;
 
     --max-width: 1440px;
     --min-width: 360px;
