@@ -11,17 +11,16 @@ const SectionHomePart5 = () => {
               Você também pode ajudar de outras maneiras!
             </h3>
             <p className="content__paragraph">
-              Você pode ajudar ONGs e protetores a mudarem a realidade da
-              proteção animal no Brasil. Sua ajuda pode fazer a diferença na
-              vida de milhares de cães e gatos que vivem em abrigos em nosso
-              país.
+              Sua ajuda pode fazer a diferença na vida de milhares de cães e
+              gatos que vivem em abrigos em nosso país.
             </p>
             <p className="content__paragraph">
               Nós, do AdoPet, temos orgulho de fazer um trabalho construído a
               várias mãos, que contribui para a ampliação e melhoria das
-              condições de atuação de ONGs e protetores parceiros.
+              condições de atuação de ONGs e protetores parceiros. O que você
+              também pode fazer:
             </p>
-            <p className="content__paragraph">O que você também pode fazer:</p>
+            {/* <p className="content__paragraph"></p> */}
             <ul className="content__paragraph">
               <li>Apadrinhar um pet</li>
               <li>Oferecer um lar temporário</li>
