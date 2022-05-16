@@ -7,7 +7,7 @@ const SectionHomePart5 = () => {
       <div className="columns">
         <div className="column">
           <div className="content">
-            <h3 className="title is-3 title__help">
+            <h3 className="title title__help">
               Você também pode ajudar de outras maneiras!
             </h3>
             <p className="content__paragraph">
