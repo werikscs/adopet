@@ -9,6 +9,7 @@ export const ContainerHowItWork = styled.div`
   align-items: center;
 
   padding: 16px;
+  margin-bottom: 1.5em;
 
   h2 {
     font-size: 1.25rem;
