@@ -33,7 +33,7 @@ export const ContentHowItWork = styled.section`
   flex-direction: column;
   gap: 16px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 600px) {
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -55,7 +55,7 @@ export const ContentHowItWork = styled.section`
     align-items: center;
     gap: 10%;
 
-    @media (min-width: 768px) {
+    @media (min-width: 650px) {
       width: 40%;
 
       align-items: center;
