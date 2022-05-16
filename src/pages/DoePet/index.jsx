@@ -12,6 +12,7 @@ import InputInternal from "../../components/InputInternal";
 
 import * as S from "./styles";
 import InputTextArea from "../../components/InputTextArea";
+import DivSelect from "../../components/DivSelect";
 
 const DoePet = () => {
   const history = useHistory();
@@ -20,7 +21,9 @@ const DoePet = () => {
     name: yup.string().required("Campo Obrigatório!"),
     img: yup.string().required("Campo Obrigatório!"),
     moreInfo: yup.string().required("Campo Obrigatório!"),
-    //colocar os selects
+    species: yup.string().required("Campo Obrigatório!"),
+    sex: yup.string().required("Campo Obrigatório!"),
+    size: yup.string().required("Campo Obrigatório!"),
   });
 
   const {
@@ -66,6 +69,44 @@ const DoePet = () => {
             error={errors.img?.message}
           />
 
+          <DivSelect
+            label="Porte"
+            placeholder="Selecione porte do animal"
+            name="size"
+            register={register}
+            error={errors.size?.message}
+            isForm
+          >
+            <option value="small">Pequeno</option>
+            <option value="medium">Medio</option>
+            <option value="large">Grande</option>
+          </DivSelect>
+
+          <DivSelect
+            label="Tipo"
+            placeholder="Selecione tipo do animal"
+            name="species"
+            register={register}
+            error={errors.species?.message}
+            isForm
+          >
+            <option value="cat">Gato</option>
+            <option value="dog">Cachorro</option>
+          </DivSelect>
+
+          <DivSelect
+            label="Sexo"
+            type="text"
+            placeholder="Selecione sexo do animal"
+            name="sex"
+            register={register}
+            error={errors.sex?.message}
+            isForm
+          >
+            <option value="f">Femea</option>
+            <option value="m">Macho</option>
+          </DivSelect>
+
           <InputTextArea
             cols="30"
             rows="10"
@@ -79,7 +120,8 @@ const DoePet = () => {
           <S.DivButtons>
             <ButtonOutlined
               type="button"
-              callback={() => console.log("voltar")}>
+              callback={() => console.log("voltar")}
+            >
               voltar
             </ButtonOutlined>
             <Button type="submit" orangeSchema>
