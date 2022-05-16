@@ -1,0 +1,21 @@
+.container__help {
+  margin-top: 3em;
+}
+
+.title__help {
+  color: var(--color-title);
+  text-align: center;
+  margin-top: 0.6em;
+}
+
+.content__paragraph {
+  color: var(--color-text);
+  margin: 15px;
+  text-align: justify;
+}
+
+.image__help {
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+  box-shadow: 8px 8px antiquewhite;
+}
