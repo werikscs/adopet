@@ -63,27 +63,23 @@ export const Container = styled.header`
     .burger {
       display: none;
     }
-
-    li {
-      padding: 0;
-      margin: 0;
-      text-align: center;
-      width: 60%;
-    }
   }
 `;
 
 export const Content = styled.nav`
   display: block;
-  position: absolute;
+  position: fixed;
   top: 100px;
   background: #ffebc5;
   width: 100%;
   height: 0px;
-  z-index: 1000;
+  z-index: 9999;
   overflow-y: hidden;
   visibility: hidden;
   padding: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   transition: ease 0.7s;
 
   ul {
@@ -125,11 +121,15 @@ export const Content = styled.nav`
     background-color: var(--input-background-color-primary);
     color: var(--color-background);
   }
-  ${(props) =>
-    props.handleButton &&
+  ${({ handleButton }) =>
+    handleButton &&
     css`
-      height: calc(100vh - 100px);
+      height: 100%;
+      max-height: 100vh;
       visibility: visible;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
     `}
 
   @media (min-width: 1024px) {
@@ -141,6 +141,7 @@ export const Content = styled.nav`
     position: relative;
     visibility: visible;
     padding: 0;
+
     a img {
       width: 35%;
       height: 28px;
@@ -159,12 +160,9 @@ export const Content = styled.nav`
     li {
       padding: 0;
       margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
+      font-size: 0.8rem;
       text-align: center;
-      width: 60%;
+      width: 100%;
     }
     button {
       width: 33%;
