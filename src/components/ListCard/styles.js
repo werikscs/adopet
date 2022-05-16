@@ -5,8 +5,6 @@ export const Ul = styled.ul`
   background-color: var(--color-fifth);
   width: 100%;
   max-width: 1200px;
-  min-height: 400px;
-  max-height: 400px;
   display: flex;
   flex-direction: "row";
   flex-wrap: ${(props) => (props.isAdote ? "wrap" : "nowrap")};
