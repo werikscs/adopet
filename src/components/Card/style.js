@@ -31,6 +31,7 @@ export const LiCard = styled.li`
     height: 275px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    object-fit: cover;
     @media (max-width: 1023px) {
       width: ${(props) => (props.isAdote ? "134px" : "290px")};
       height: ${(props) => (props.isAdote ? "170px" : "275px")};
