@@ -9,8 +9,9 @@ const SectionHomePart2 = () => {
       </Figure>
       <Content>
         <ContentTitle>
-          <h3>Somos amantes de animais</h3>
-          <h3>de estimação tentando fazer a diferença</h3>
+          <h3>
+            Somos amantes de animais de estimação tentando fazer a diferença
+          </h3>
         </ContentTitle>
 
         <p>
@@ -20,7 +21,6 @@ const SectionHomePart2 = () => {
           dessa forma, ajudando animais de estimação a passarem de sozinhos a
           adotados.
         </p>
-        <br />
 
         <p>
           As ONGs/protetores parceiros ficam responsáveis pelo processo e
