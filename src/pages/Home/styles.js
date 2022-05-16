@@ -18,7 +18,6 @@ export const ContainerListPets = styled.div`
     padding-bottom: 16px;
   }
 
-<<<<<<< HEAD
   > div {
     background-color: var(--color-fifth);
     width: 100%;
@@ -27,8 +26,6 @@ export const ContainerListPets = styled.div`
     align-items: center;
   }
 
-=======
->>>>>>> 621edb3ccca5da628ffb734a5cc8f36cea024ee7
   @media screen and (min-width: 768px) {
     h2 {
       font-size: 1.6rem;
