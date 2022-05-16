@@ -33,7 +33,9 @@ const Home = () => {
       <SectionHomePart3 />
       <ContainerListPets>
         <h2>Animais em Destaque</h2>
-        <ListCard listPets={listPet} />
+        <div>
+          <ListCard listPets={listPet} />
+        </div>
       </ContainerListPets>
       <SectionHomePart5 />
       <Footer />
