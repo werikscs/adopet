@@ -1,0 +1,45 @@
+.container__help {
+  margin-top: 3em;
+}
+
+.title__help {
+  color: var(--color-title);
+  text-align: center;
+  margin-top: 0.6em;
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .title__help {
+    font-size: 1.6rem;
+  }
+}
+
+.content__paragraph {
+  color: var(--color-text);
+  margin: 15px;
+  text-align: justify;
+}
+
+@media screen and (min-width: 768px) {
+  .content__paragraph {
+    font-size: 1rem;
+    text-align: justify;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .content__paragraph {
+    font-size: 1.2rem;
+  }
+}
+
+.image__help {
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+ul > li {
+  list-style: disc;
+}
