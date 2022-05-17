@@ -37,6 +37,17 @@ export default createGlobalStyle`
     --min-width: 360px;
 }
 
+html{
+    overflow: unset;
+}
+
+#root{
+    /* width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    position: relative; */
+}
+
 body, input, button, textarea{
     font-family: 'Hind', sans-serif;
     font-size: 1rem;
