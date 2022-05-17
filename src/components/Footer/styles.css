@@ -1,10 +1,27 @@
+.footer {
+  padding: 0;
+}
+
 .footer__home {
   width: 100%;
   max-width: var(--max-width);
 
   background-color: var(--color-footer);
 
-  margin-top: 3em;
+  padding-top: 16px;
+
+  /* margin-top: 3em; */
+}
+
+.has-text-centered {
+  height: 280px;
+
+  padding-top: 32px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .paragraph__title--footer {

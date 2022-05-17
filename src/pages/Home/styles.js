@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-// import imgBg from "../../assets/paws-bg.jpg";
-
 export const Main = styled.main`
   width: 100%;
   height: 100vh;
@@ -18,7 +16,7 @@ export const Main = styled.main`
 
   overflow-y: auto;
 
-  /* background-color: rebeccapurple; */
+  background-color: rosybrown;
 `;
 
 export const ContainerListPets = styled.div`
@@ -29,6 +27,8 @@ export const ContainerListPets = styled.div`
   flex-direction: column;
   align-items: center;
 
+  background-color: white;
+
   h2 {
     font-size: 1.25rem;
     padding-bottom: 16px;
@@ -38,12 +38,14 @@ export const ContainerListPets = styled.div`
     background-color: var(--color-bg-homept1);
     width: 100%;
     max-width: 1440px;
+    background-color: var(--color-bg-homept1);
 
     ul {
       max-width: 1250px;
+      gap: 16px;
     }
 
-    background-color: var(--color-bg-homept1);
+    /* background-color: var(--color-bg-homept1); */
 
     display: flex;
     flex-direction: column;
