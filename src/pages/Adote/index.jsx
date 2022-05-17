@@ -8,6 +8,7 @@ import api from "../../services/api";
 
 import { Container, ContentTotal, ContentFiltro, ContentList } from "./styles";
 import iconFilter from "../../assets/filterIcon.svg";
+import petSad from "../../assets/sadDog.jpeg";
 
 import {
   Drawer,
@@ -168,7 +169,17 @@ const Adote = () => {
           </Drawer>
         </ContentFiltro>
         <ContentList>
-          <ListCard listPets={listpets} isAdote />
+          {listpets.length > 0 ? (
+            <ListCard listPets={listpets} isAdote />
+          ) : (
+            <div>
+              <img src={petSad} alt="pet triste" />
+              <h2>
+                Não encontramos nenhum pet para adoção que atenda aos filtros
+                selecionados.
+              </h2>
+            </div>
+          )}
         </ContentList>
       </ContentTotal>
     </Container>
