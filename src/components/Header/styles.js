@@ -1,4 +1,15 @@
 import styled, { css } from "styled-components";
+
+export const ExternalContainer = styled.div`
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+
+  background-color: #ffebc5;
+`;
+
 export const Container = styled.header`
   display: flex;
   align-items: center;
@@ -65,8 +76,15 @@ export const Container = styled.header`
   }
 
   @media (min-width: 1024px) {
+    max-width: var(--max-width);
+
     flex-direction: row;
     justify-content: flex-start;
+
+    margin: 0 auto;
+    position: absolute;
+
+    gap: 8px;
 
     .logo--content {
       /* width: 30%; */
@@ -166,13 +184,14 @@ export const Content = styled.nav`
     `}
 
   @media (min-width: 1024px) {
-    display: block;
+    display: flex;
+    justify-content: flex-start;
 
     position: relative;
     top: 0px;
     z-index: 1;
 
-    width: fit-content;
+    width: 90%;
     height: 100px;
 
     visibility: visible;
@@ -214,8 +233,62 @@ export const Content = styled.nav`
       }
     }
     button {
+      margin: 0;
+      margin-left: auto;
+
       width: 110px;
       height: 50px;
     }
+  }
+`;
+
+export const DivInfoUser = styled.div`
+  /* width: 100%; */
+
+  display: flex;
+  gap: 12px;
+
+  margin-left: auto;
+
+  img {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 8px;
+
+    object-fit: cover;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h5 {
+      font-size: 1.25rem;
+
+      color: var(--color-title);
+    }
+
+    h6 {
+      font-size: 1rem;
+
+      color: var(--color-title-50);
+
+      margin-top: -10px;
+    }
+  }
+
+  button {
+    width: fit-content;
+
+    padding: 0 16px;
+
+    font-size: 1.75rem;
+    font-weight: bold;
+    font-family: "Baloo Chettan 2";
+
+    color: var(--color-first);
+    background-color: transparent;
   }
 `;
