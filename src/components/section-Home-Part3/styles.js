@@ -3,6 +3,7 @@ import test from "../../assets/circuloImg.png";
 
 export const ContainerHowItWork = styled.div`
   width: 100%;
+  max-width: var(--max-width);
 
   display: flex;
   flex-direction: column;
