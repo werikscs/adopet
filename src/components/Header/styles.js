@@ -135,12 +135,12 @@ export const Content = styled.nav`
     gap: 36px;
   }
   li {
-    /* padding: 1rem 0;
-    margin: 0 1rem; */
+    width: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    order: 1;
   }
   a {
     width: 280px;
@@ -165,6 +165,8 @@ export const Content = styled.nav`
     /* margin-left: 18%; */
   }
   button {
+    order: ${({ isLogged }) => (isLogged ? 0 : 3)};
+
     width: 280px;
 
     margin: 0 auto;
@@ -222,6 +224,8 @@ export const Content = styled.nav`
 
       width: fit-content;
 
+      order: 0;
+
       padding: 0;
       margin: 0;
       /* font-size: 0.8rem; */
@@ -233,6 +237,8 @@ export const Content = styled.nav`
       }
     }
     button {
+      order: 0;
+
       margin: 0;
       margin-left: auto;
 
@@ -279,7 +285,7 @@ export const DivInfoUser = styled.div`
     }
   }
 
-  button {
+  > button {
     width: fit-content;
 
     padding: 0 16px;
@@ -290,5 +296,24 @@ export const DivInfoUser = styled.div`
 
     color: var(--color-first);
     background-color: transparent;
+  }
+
+  @media screen and (max-width: 1023px) {
+    justify-content: center;
+    order: 0;
+
+    width: 100%;
+
+    margin-left: 0;
+
+    padding: 0 0 16px;
+
+    > img {
+      margin-left: 60px;
+    }
+
+    button {
+      margin: 0;
+    }
   }
 `;
