@@ -10,7 +10,10 @@ export const ContainerHowItWork = styled.div`
   align-items: center;
 
   padding: 16px;
-  margin-bottom: 1.5em;
+  padding-bottom: 24px;
+  /* margin-bottom: 1.5em; */
+
+  background-color: white;
 
   h2 {
     font-size: 1.25rem;
