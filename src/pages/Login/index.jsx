@@ -5,12 +5,14 @@ import { Container } from "./style.js";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Link, useHistory } from "react-router-dom";
+import { useState } from "react";
 
 const Login = () => {
   const history = useHistory();
   const axios = require("axios").default;
   const BASE_URL = "http://localhost:3001";
   const token = JSON.parse(localStorage.getItem("token"));
+  const [signinError, setSigninError] = useState("");
 
   const formSchema = yup.object().shape({
     email: yup.string().required("Email obrigatório").email("E-mail inválido"),
@@ -33,15 +35,17 @@ const Login = () => {
         email: `${data.email}`,
         password: `${data.password}`,
       },
-    }).then((response) => {
-      if (response.status === 200) {
-        localStorage.setItem(
-          "token",
-          JSON.stringify(response.data.accessToken)
-        );
-      }
-      history.push("/");
-    });
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          localStorage.setItem(
+            "token",
+            JSON.stringify(response.data.accessToken)
+          );
+        }
+        history.push("/");
+      })
+      .catch((err) => setSigninError(err.response.data));
   };
 
   return !token ? (
@@ -68,7 +72,7 @@ const Login = () => {
           error={errors.password?.message}
           register={register}
         />
-
+        {signinError !== "" ? <h4>{signinError}</h4> : <></>}
         <Button type="submit">Entrar</Button>
         <h3>
           Ainda não possui uma conta? <Link to="/cadastro">Cadastre-se</Link>
