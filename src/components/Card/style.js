@@ -21,6 +21,8 @@ export const LiCard = styled.li`
     width: ${(props) => (props.isAdote ? "134px" : "250px")};
     height: ${(props) => (props.isAdote ? "200px" : "280px")};
     margin-left: ${(props) => (props.isAdote ? "0" : "10px")};
+    padding: 4px;
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
   }
   @media (min-width: 1024px) {
     margin: 1%;
