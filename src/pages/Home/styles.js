@@ -17,9 +17,6 @@ export const Main = styled.main`
   overflow-y: auto;
 
   background-color: rosybrown;
-
-  /* background: url(${imgBg});
-  background-color: rgba(255, 255, 255, 0.5); */
 `;
 
 export const ContainerListPets = styled.div`
