@@ -5,18 +5,23 @@ export const ContainerTotal = styled.div`
   height: 80vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   @media (min-width: 1024px) {
     flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+    max-width: 1440px;
   }
 `;
 
 export const ContentFiltro = styled.div`
   width: 100%;
   display: flex;
+  max-width: 500px;
   flex-direction: column;
   align-items: center;
   padding-top: 1rem;
-  @media (min-width: 1023px) {
+  @media (min-width: 1024px) {
     width: 32%;
   }
   > div {
@@ -39,35 +44,11 @@ export const ContentFiltro = styled.div`
       width: 100%;
       display: flex;
       align-items: center;
+      justify-content: center;
       border-bottom: 1px solid var(--color-first);
-      margin-bottom: 16px;
 
       > img {
-        margin-left: 16px;
         margin-right: 10px;
-      }
-    }
-    > div {
-      width: 90%;
-      display: flex;
-      flex-direction: column;
-      padding-bottom: 10px;
-      height: 100px;
-      justify-content: space-between;
-      > label {
-        padding-left: 16px;
-        font-weight: 600;
-        font-size: 1.1rem;
-      }
-      > input {
-        width: 100%;
-        height: 54px;
-        border-radius: 5px;
-        border: 2px solid transparent;
-
-        &:hover {
-          border: 2px solid var(--color-first);
-        }
       }
     }
   }
@@ -95,8 +76,10 @@ export const ContentFiltro = styled.div`
 
 export const ContentList = styled.div`
   width: 100%;
+  max-width: 600px;
   margin-top: 1rem;
-  @media (min-width: 1023px) {
+  @media (min-width: 1024px) {
     width: 66%;
+    max-width: 1440px;
   }
 `;

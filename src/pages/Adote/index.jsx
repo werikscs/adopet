@@ -19,6 +19,7 @@ import {
   DrawerCloseButton,
   useDisclosure,
 } from "@chakra-ui/react";
+import InputSeach from "../../components/inputSeach";
 
 const Adote = () => {
   const [sex, setSex] = useState("");
@@ -27,22 +28,16 @@ const Adote = () => {
   const [name, setName] = useState("");
 
   useEffect(() => {
-    filtros();
+    filters();
   }, [sex, name, size, species]);
 
   const [listpets, setListpets] = useState([]);
 
-  const filtros = () => {
+  const filters = () => {
     api.get(`/animals?${name}${sex}${species}${size}`).then((res) => {
       console.log(res.data);
       setListpets(res.data);
     });
-  };
-
-  const getName = (value) => {
-    const setFilter = "name_like=" + value + "&";
-
-    value ? setName(setFilter) : setName("");
   };
 
   // chakra
@@ -56,14 +51,7 @@ const Adote = () => {
           <h2>
             <img src={iconFilter} alt="icon filter" /> Pesquisar por filtro
           </h2>
-          <div className="inputDiv">
-            <label>NOME</label>
-            <input
-              type="search"
-              placeholder="Pesquise por nome"
-              onChange={(e) => getName(e.target.value)}
-            />
-          </div>
+          <InputSeach setName={setName} />
           <DivSelect
             label="PORTE"
             placeholder="qualquer"
@@ -107,18 +95,24 @@ const Adote = () => {
           isOpen={isOpen}
           placement="right"
           onClose={onClose}
-          // bgColor="#FFEBC5"
           // finalFocusRef={btnRef}
         >
           <DrawerOverlay />
-          <DrawerContent bgColor="#FFEBC5">
+          <DrawerContent bgColor="var(--color-second)">
             <DrawerHeader
               display="flex"
               flexDirection="row"
-              justifyContent="space-between"
+              alignItems="center"
+              justifyContent="space-around"
               color="var(--color-first)"
+              fontWeight="600"
+              fontSize="1.4rem"
+              borderBottomColor="var(--color-first)"
+              borderBottomWidth="1px"
+              pb="10px"
+              pt="10px"
             >
-              Pesquisar por Filtro
+              <img src={iconFilter} alt="icon filter" /> Pesquisar por Filtro
               <DrawerCloseButton />
             </DrawerHeader>
 
@@ -127,16 +121,10 @@ const Adote = () => {
               flexDirection="column"
               w="100%"
               pl="15px"
+              // overflowY="scroll"
             >
               <div>
-                <div className="inputDiv">
-                  <label>NOME</label>
-                  <input
-                    type="search"
-                    placeholder="Pesquise por nome"
-                    onChange={(e) => getName(e.target.value)}
-                  />
-                </div>
+                <InputSeach setName={setName} />
                 <DivSelect
                   label="PORTE"
                   placeholder="qualquer"
@@ -174,12 +162,7 @@ const Adote = () => {
               </div>
             </DrawerBody>
 
-            <DrawerFooter>
-              {/* <Button variant="outline" mr={3} onClick={onClose}>
-                Cancel
-              </Button> */}
-              {/* <Button colorScheme="blue">Save</Button> */}
-            </DrawerFooter>
+            <DrawerFooter></DrawerFooter>
           </DrawerContent>
         </Drawer>
       </ContentFiltro>
