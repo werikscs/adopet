@@ -66,6 +66,7 @@ export const LiCard = styled.li`
       font-size: 1.8rem;
       margin-bottom: 0.5rem;
       margin-top: 0.8rem;
+      display: flex;
 
       text-transform: capitalize;
       @media (max-width: 1023px) {
@@ -76,7 +77,7 @@ export const LiCard = styled.li`
 
       > img {
         margin-left: 0.8rem;
-        transform: translate(0, 4px);
+        transform: translate(0, 5px);
         width: 18px;
         height: 27px;
         @media (max-width: 1023px) {
