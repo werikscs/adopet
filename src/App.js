@@ -1,5 +1,4 @@
-
-import Signup from "./pages/Cadastro";
+// import Signup from "./pages/Cadastro";
 import GlobalStyle from "./styles/global";
 import Routers from "./routers";
 import Header from "./components/Header";
@@ -9,7 +8,7 @@ function App() {
     <>
       <GlobalStyle />
       <Header />
-      <Signup />
+      {/* <Signup /> */}
       <Routers />
     </>
   );

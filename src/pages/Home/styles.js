@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import imgBg from "../../assets/paws-bg.jpg";
+//import imgBg from "../../assets/paws-bg.jpg";
 
 export const Main = styled.main`
   width: 100%;
