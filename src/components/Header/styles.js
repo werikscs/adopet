@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const ExternalContainer = styled.div`
   width: 100%;
-  height: 100px;
+  height: 13vh;
 
   display: flex;
   justify-content: center;

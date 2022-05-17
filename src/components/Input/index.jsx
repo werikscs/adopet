@@ -2,6 +2,8 @@ import { Container, InputContainer } from "./styles";
 
 const Input = ({
   label,
+  type,
+  placeholder,
   icon: Icon,
   orangeSchema = false,
   register,
@@ -11,16 +13,17 @@ const Input = ({
 }) => {
   return (
     <Container>
-      <div>
+      <label>
         {label} {!!error && <span> {error}</span>}
-      </div>
+      </label>
       <InputContainer isErrored={!!error} orangeSchema={orangeSchema}>
         {Icon && <Icon size={20} />}
-        {/* <input {...register(name)} {...rest} /> */}
-        <input {...rest} />
+        <input type={type} name={name} {...register(name)} {...rest} placeholder={placeholder} />
       </InputContainer>
     </Container>
   );
 };
 
 export default Input;
+
+//{...register(`${name}`)}
