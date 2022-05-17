@@ -90,4 +90,23 @@ export const ContentList = styled.div`
     width: 66%;
     max-width: 1440px;
   }
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+    > img {
+      width: 200px;
+      height: 200px;
+    }
+    > h2 {
+      width: 300px;
+      text-align: center;
+      color: var(--color-first);
+      font-weight: 600;
+      font-family: "Baloo Chettan 2", cursive;
+      font-size: 1.5rem;
+    }
+  }
 `;
