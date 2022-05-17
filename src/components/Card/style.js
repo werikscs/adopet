@@ -64,6 +64,8 @@ export const LiCard = styled.li`
       font-size: 1.8rem;
       margin-bottom: 0.5rem;
       margin-top: 0.8rem;
+
+      text-transform: capitalize;
       @media (max-width: 1023px) {
         font-size: ${(props) => (props.isAdote ? "1.2rem" : "1.4rem")};
         margin-bottom: ${(props) => (props.isAdote ? "0" : "0")};

@@ -1,42 +1,64 @@
 import styled, { css } from "styled-components";
+
+export const ExternalContainer = styled.div`
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+
+  background-color: #ffebc5;
+`;
+
 export const Container = styled.header`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  background-color: #ffebc5;
+  justify-content: space-between;
+
+  padding: 0 16px;
+
   width: 100%;
   height: 100px;
-  box-shadow: 0px 6px 5px -3px rgba(0, 0, 0, 0.75);
+
+  background-color: #ffebc5;
+
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+
+  /* box-shadow: 0px 6px 5px -3px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 6px 5px -3px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 6px 5px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 5px -3px rgba(0, 0, 0, 0.75); */
 
   .logo--content {
-    width: 30%;
+    /* width: 30%; */
+    height: 100%;
   }
   .logo--content img {
     width: 100%;
   }
 
   .burger {
-    width: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 20px;
+
+    height: 40px;
+
     border: none;
     background: none;
   }
   .btn--burger {
-    border-top: 2px solid var(--input-background-color-primary);
-    width: 20px;
+    border-top: 4px solid var(--input-background-color-primary);
+    width: 40px;
     display: block;
   }
   .btn--burger::after,
   .btn--burger::before {
     content: "";
     display: block;
-    width: 20px;
-    height: 2px;
+    width: 40px;
+    height: 4px;
     background: var(--input-background-color-primary);
     margin-top: 5px;
     transition: ease 0.4s;
@@ -54,12 +76,27 @@ export const Container = styled.header`
   }
 
   @media (min-width: 1024px) {
+    max-width: var(--max-width);
+
+    flex-direction: row;
+    justify-content: flex-start;
+
+    margin: 0 auto;
+    position: absolute;
+
+    gap: 8px;
+
     .logo--content {
-      width: 15%;
+      /* width: 30%; */
+      height: 100%;
     }
     .logo--content img {
-      width: 100%;
+      width: 240px;
+      height: 100px;
+
+      object-fit: cover;
     }
+
     .burger {
       display: none;
     }
@@ -68,19 +105,24 @@ export const Container = styled.header`
 
 export const Content = styled.nav`
   display: block;
-  position: fixed;
-  top: 100px;
-  background: #ffebc5;
   width: 100%;
   height: 0px;
-  z-index: 9999;
-  overflow-y: hidden;
-  visibility: hidden;
-  padding: 0;
+
+  position: fixed;
+  top: 100px;
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 9999;
+
+  background: #ffebc5;
+
+  overflow-y: hidden;
+  visibility: hidden;
+
   transition: ease 0.7s;
+
+  border-top: 1px solid rgba(200, 200, 200, 0.5);
 
   ul {
     width: 100%;
@@ -90,34 +132,45 @@ export const Content = styled.nav`
     justify-content: center;
     align-items: center;
     padding: 0;
+    gap: 36px;
   }
   li {
-    padding: 1rem 0;
-    margin: 0 1rem;
+    width: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    order: 1;
   }
   a {
-    width: 80%;
+    width: 280px;
+
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    font-size: 1.3rem;
+
+    font-size: 1.25rem;
+    font-weight: bold;
+
     text-decoration: none;
-    color: #000;
-    font-size: 1rem;
-    gap: 4%;
+
+    color: var(--color-title);
+
+    gap: 36px;
   }
   a img {
-    width: 32px;
-    height: 28px;
-    margin-left: 18%;
+    width: 40px;
+    height: 40px;
+    margin-left: 50px;
+    /* margin-left: 18%; */
   }
   button {
-    width: 50%;
+    order: ${({ isLogged }) => (isLogged ? 0 : 3)};
+
+    width: 280px;
+
     margin: 0 auto;
-    margin-top: 4%;
+
     background-color: var(--input-background-color-primary);
     color: var(--color-background);
   }
@@ -128,46 +181,139 @@ export const Content = styled.nav`
       max-height: 100vh;
       visibility: visible;
       overflow: hidden;
-      padding: 0;
+      padding: 48px 0;
       margin: 0;
     `}
 
   @media (min-width: 1024px) {
-    display: block;
-    top: 0px;
-    width: 100%;
-    height: 100px;
-    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+
     position: relative;
+    top: 0px;
+    z-index: 1;
+
+    width: 90%;
+    height: 100px;
+
     visibility: visible;
+
     padding: 0;
 
     a img {
-      width: 35%;
-      height: 28px;
+      /* width: 35%;
+      height: 28px; */
+      display: none;
     }
     ul {
-      width: 90%;
+      width: 100%;
       height: 100px;
-      list-style: none;
+
       display: flex;
       flex-direction: row;
-      justify-content: space-evenly;
+      justify-content: flex-start;
       align-items: center;
+
       padding: 0;
       margin: 0;
+
+      gap: 16px;
     }
     li {
+      display: block;
+
+      width: fit-content;
+
+      order: 0;
+
       padding: 0;
       margin: 0;
-      font-size: 0.8rem;
-      text-align: center;
-      width: 100%;
+      /* font-size: 0.8rem; */
+      /* text-align: center;
+      width: fit-content; */
+
+      a {
+        width: fit-content;
+      }
     }
     button {
-      width: 33%;
+      order: 0;
+
       margin: 0;
-      margin-left: 3%;
+      margin-left: auto;
+
+      width: 110px;
+      height: 50px;
+    }
+  }
+`;
+
+export const DivInfoUser = styled.div`
+  /* width: 100%; */
+
+  display: flex;
+  gap: 12px;
+
+  margin-left: auto;
+
+  img {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 8px;
+
+    object-fit: cover;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h5 {
+      font-size: 1.25rem;
+
+      color: var(--color-title);
+    }
+
+    h6 {
+      font-size: 1rem;
+
+      color: var(--color-title-50);
+
+      margin-top: -10px;
+    }
+  }
+
+  > button {
+    width: fit-content;
+
+    padding: 0 16px;
+
+    font-size: 1.75rem;
+    font-weight: bold;
+    font-family: "Baloo Chettan 2";
+
+    color: var(--color-first);
+    background-color: transparent;
+  }
+
+  @media screen and (max-width: 1023px) {
+    justify-content: center;
+    order: 0;
+
+    width: 100%;
+
+    margin-left: 0;
+
+    padding: 0 0 16px;
+
+    > img {
+      margin-left: 60px;
+    }
+
+    button {
+      margin: 0;
     }
   }
 `;

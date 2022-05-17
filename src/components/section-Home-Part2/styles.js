@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
+  max-width: var(--max-width);
   display: flex;
   justify-content: center;
 
@@ -129,6 +130,7 @@ export const Content = styled.div`
 
 export const ContentTitle = styled.div`
   h3 {
+    text-align: center;
     font-size: 1.25rem;
   }
 
