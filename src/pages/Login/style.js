@@ -31,8 +31,13 @@ export const Container = styled.div`
       margin-bottom: -10px;
     }
 
-    h3 {
+    h3,
+    h4 {
       align-self: center;
+    }
+
+    h4 {
+      color: #fd3700;
     }
   }
 

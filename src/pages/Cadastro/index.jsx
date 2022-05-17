@@ -6,12 +6,14 @@ import { Container } from "./style.js";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Link, useHistory } from "react-router-dom";
+import { useState } from "react";
 
 const Cadastro = () => {
   const token = JSON.parse(localStorage.getItem("token"));
   const history = useHistory();
   const axios = require("axios").default;
   const BASE_URL = "http://localhost:3001/";
+  const [signupError, setSignupError] = useState("");
 
   const formSchema = yup.object().shape({
     name: yup
@@ -52,9 +54,13 @@ const Cadastro = () => {
         avatar: `${data.avatar}`,
         type: `${data.type}`,
       },
-    }).then((response) => {
-      response.status === 201 ? history.push("/login") : console.log(response);
-    });
+    })
+      .then((response) => {
+        response.status === 201
+          ? history.push("/login")
+          : console.log(response);
+      })
+      .catch((err) => setSignupError(err.response.data));
   };
 
   return !token ? (
@@ -109,6 +115,8 @@ const Cadastro = () => {
         <label htmlFor="type">Tipo</label>
 
         <Select name="type" register={register} orangeSchema="orangeSchema" />
+
+        {signupError !== "" ? <h4>{signupError}</h4> : <></>}
         <Button type="submit">Registrar</Button>
         <h3>
           Já possui conta? <Link to="/login">Faça login</Link>
