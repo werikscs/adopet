@@ -1,4 +1,7 @@
 .footer__home {
+  width: 100%;
+  max-width: var(--max-width);
+
   background-color: var(--color-footer);
 
   margin-top: 3em;

@@ -1,3 +1,4 @@
+
 import Signup from "./pages/Cadastro";
 import GlobalStyle from "./styles/global";
 import Routers from "./routers";

@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 export const Section = styled.section`
   width: 100%;
+  max-width: var(--max-width);
   height: 100%;
+  max-height: 250px;
 
   display: flex;
   justify-content: center;
@@ -54,8 +56,9 @@ export const Section = styled.section`
   }
 
   @media screen and (min-width: 1024px) {
-    padding: 32px;
+    padding: 0 32px;
     padding-bottom: 0;
+    max-height: 450px;
 
     div {
       position: static;
