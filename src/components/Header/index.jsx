@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Redirect } from "react-router-dom";
+
+import api from "../../services/api";
 
 import Logo from "../../assets/Logo.svg";
 import HomeIcon from "../../assets/HomeIcon.svg";
@@ -11,22 +14,32 @@ import defaultImg from "../../assets/proprietario-default-img.svg";
 import Button from "../Button";
 
 import { Container, Content, DivInfoUser, ExternalContainer } from "./styles";
-import api from "../../services/api";
 
 const Header = () => {
-  const isLogged = true;
-
+  const [isLogged, setIsLogged] = useState(true);
   const [dataOwner, setDataOwner] = useState({});
+  const [handleButton, setHandleButton] = useState(false);
 
   const getUserById = (userId) => {
     api.get(`/644/users/${userId}`).then((res) => setDataOwner(res.data));
   };
 
-  const [handleButton, setHandleButton] = useState(false);
-
   const buttonClick = () => {
     setHandleButton(!handleButton);
   };
+
+  const loggoutAndGoToHome = () => {
+    // console.log("aaaa");
+    // localStorage.clear();
+    setIsLogged(!isLogged);
+    // return <Redirect to="/" />;
+  };
+
+  const login = () => {
+    setIsLogged(!isLogged);
+  };
+
+  console.log(isLogged);
 
   return (
     <ExternalContainer>
@@ -43,12 +56,12 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/">
+              <Link to="/adote">
                 <img src={AddIcon} alt="Add" /> Adote um Pet
               </Link>
             </li>
             <li>
-              <Link to="/">
+              <Link to="/user/pets">
                 <img src={SortIcon} alt="Sort" /> Doe um Pet
               </Link>
             </li>
@@ -65,10 +78,12 @@ const Header = () => {
                   <h5>{dataOwner.name || "João da Silva"}</h5>
                   <h6>perfil</h6>
                 </div>
-                <button>SAIR</button>
+                <button onClick={loggoutAndGoToHome}>SAIR</button>
               </DivInfoUser>
             ) : (
-              <Button>Entrar</Button>
+              <Button isLogged onClick={login}>
+                Entrar
+              </Button>
             )}
           </ul>
         </Content>
