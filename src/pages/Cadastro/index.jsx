@@ -62,6 +62,7 @@ const Cadastro = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <h1>Cadastro</h1>
         <Input
+          orangeSchema="orangeSchema"
           label="Nome*"
           type="text"
           name="name"
@@ -69,8 +70,8 @@ const Cadastro = () => {
           error={errors.name?.message}
           register={register}
         />
-
         <Input
+          orangeSchema="orangeSchema"
           label="Email*"
           type="email"
           name="email"
@@ -78,8 +79,8 @@ const Cadastro = () => {
           error={errors.email?.message}
           register={register}
         />
-
         <Input
+          orangeSchema="orangeSchema"
           label="Senha*"
           type="password"
           name="password"
@@ -87,8 +88,8 @@ const Cadastro = () => {
           error={errors.password?.message}
           register={register}
         />
-
         <Input
+          orangeSchema="orangeSchema"
           label="Confirme sua senha*"
           type="password"
           placeholder="Digite a senha novamente"
@@ -96,8 +97,8 @@ const Cadastro = () => {
           error={errors.confirmPassword?.message}
           register={register}
         />
-
         <Input
+          orangeSchema="orangeSchema"
           label="Avatar"
           type="avatar"
           name="avatar"
@@ -105,10 +106,9 @@ const Cadastro = () => {
           error={errors.avatar?.message}
           register={register}
         />
-
         <label htmlFor="type">Tipo</label>
-        <Select name="type" register={register} />
 
+        <Select name="type" register={register} orangeSchema="orangeSchema" />
         <Button type="submit">Registrar</Button>
         <h3>
           Já possui conta? <Link to="/login">Faça login</Link>

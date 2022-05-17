@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import signupDogs from "../../assets/signupDogs.jpg";
+import fundoLogin from "../../assets/loginDogs.png";
 
 export const Container = styled.div`
-  background-image: url(${signupDogs});
+  background-image: url(${fundoLogin});
   display: flex;
   align-items: center;
   justify-content: center;

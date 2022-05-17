@@ -1,8 +1,8 @@
 import { Container } from "./style";
 
-const Select = ({ name, register }) => {
+const Select = ({ name, register, orangeSchema = false }) => {
   return (
-    <Container>
+    <Container orangeSchema={orangeSchema}>
       <select name={name} {...register(name)} id="">
         <option value="Pessoa">Pessoa</option>
         <option value="Instituição">Instituição</option>

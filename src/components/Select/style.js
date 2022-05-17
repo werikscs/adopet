@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   text-align: left;
@@ -13,5 +13,16 @@ export const Container = styled.div`
     margin: 10px 0;
     padding-left: 10px;
     color: var(--color-title);
+    font-size: 1rem;
+
+    ${(props) =>
+      props.orangeSchema
+        ? css`
+            background: var(--input-background-color-primary);
+            color: var(--color-second);
+          `
+        : css`
+            background: #fff9f2;
+          `}
   }
 `;

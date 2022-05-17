@@ -50,6 +50,7 @@ const Login = () => {
         <h1>Login</h1>
 
         <Input
+          orangeSchema="orangeSchema"
           label="Email"
           type="email"
           name="email"
@@ -59,6 +60,7 @@ const Login = () => {
         />
 
         <Input
+          orangeSchema="orangeSchema"
           label="Senha"
           type="password"
           name="password"
