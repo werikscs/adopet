@@ -8,7 +8,7 @@ export const Divselect = styled.div`
   gap: 8px;
 
   label {
-    font-size: 1.25rem;
+    font-size: ${(props) => (props.isForm ? "1.25rem" : "1.1rem")};
     font-weight: 600;
 
     padding-left: 16px;

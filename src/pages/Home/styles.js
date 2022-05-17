@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-//import imgBg from "../../assets/paws-bg.jpg";
-
 export const Main = styled.main`
   width: 100%;
   height: 100vh;
@@ -35,6 +33,7 @@ export const ContainerListPets = styled.div`
   }
 
   > div {
+    background-color: var(--color-bg-homept1);
     width: 100%;
     max-width: 1440px;
 
