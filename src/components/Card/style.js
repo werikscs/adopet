@@ -64,6 +64,7 @@ export const LiCard = styled.li`
       font-size: 1.8rem;
       margin-bottom: 0.5rem;
       margin-top: 0.8rem;
+      display: flex;
       @media (max-width: 1023px) {
         font-size: ${(props) => (props.isAdote ? "1.2rem" : "1.4rem")};
         margin-bottom: ${(props) => (props.isAdote ? "0" : "0")};
@@ -72,7 +73,7 @@ export const LiCard = styled.li`
 
       > img {
         margin-left: 0.8rem;
-        transform: translate(0, 4px);
+        transform: translate(0, 5px);
         width: 18px;
         height: 27px;
         @media (max-width: 1023px) {

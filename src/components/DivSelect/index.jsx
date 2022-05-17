@@ -30,6 +30,7 @@ const DivSelect = ({
           border="2px"
           borderColor={isForm ? "#FF8E15" : "#fff"}
           h="54px"
+          pb={isForm ? "0" : "16px"}
           fontSize="1.25rem"
           fontWeight="600"
           color="rgba(51,52,55,0.6)"

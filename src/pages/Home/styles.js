@@ -19,7 +19,7 @@ export const ContainerListPets = styled.div`
   }
 
   > div {
-    background-color: var(--color-fifth);
+    background-color: var(--color-bg-homept1);
     width: 100%;
     display: flex;
     flex-direction: column;

@@ -24,10 +24,12 @@ export const Ul = styled.ul`
     /* max-height: none; */
     /* padding: 2%; */
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: row;
+    align-items: stretch;
 
-    overflow: hidden;
+    overflow-y: ${(props) => (props.isAdote ? "scroll" : "hidden")};
+    overflow-x: hidden;
 
     background-color: ${(props) =>
       props.isAdote ? "#fff" : "var(--color-bg-homept1)"};
