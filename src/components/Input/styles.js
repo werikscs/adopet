@@ -39,6 +39,10 @@ export const InputContainer = styled.div`
     height: 18px;
   }
 
+  label {
+    color: var(--color-title-50);
+  }
+
   svg {
     margin-right: 10px;
   }
