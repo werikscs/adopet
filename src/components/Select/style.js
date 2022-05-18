@@ -12,7 +12,7 @@ export const Container = styled.div`
     transition: 0.4s;
     margin: 10px 0;
     padding-left: 10px;
-    color: var(--color-title);
+    color: var(--color-text);
     font-size: 1rem;
 
     ${(props) =>

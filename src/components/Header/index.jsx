@@ -22,7 +22,7 @@ const Header = () => {
 
   const [handleButton, setHandleButton] = useState(false);
 
-  const { id } = JSON.parse(localStorage.getItem("infoUser"));
+  const { id } = JSON.parse(localStorage.getItem("infoUser") | "");
 
   const { userData, updateUserData } = useContext(UserContext);
 
@@ -97,7 +97,8 @@ const Header = () => {
         <button
           id="burger"
           className={handleButton ? "burger active" : "burger "}
-          onClick={() => buttonClick()}>
+          onClick={() => buttonClick()}
+        >
           <span className="btn--burger"></span>
         </button>
       </Container>

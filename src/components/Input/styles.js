@@ -36,6 +36,7 @@ export const InputContainer = styled.div`
     flex: 1;
     border: 0;
     color: var(--color-title);
+    height: 18px;
   }
 
   svg {
