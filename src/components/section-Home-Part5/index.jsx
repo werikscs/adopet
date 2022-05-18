@@ -1,9 +1,10 @@
 import helpPet from "../../assets/ajudapet.webp";
 import "./styles.css";
+import { Container } from "./styles";
 
 const SectionHomePart5 = () => {
   return (
-    <div className="container container__help">
+    <Container>
       <div className="columns">
         <div className="column">
           <div className="content">
@@ -20,7 +21,7 @@ const SectionHomePart5 = () => {
               condições de atuação de ONGs e protetores parceiros. O que você
               também pode fazer:
             </p>
-            {/* <p className="content__paragraph"></p> */}
+
             <ul className="content__paragraph">
               <li>Apadrinhar um pet</li>
               <li>Oferecer um lar temporário</li>
@@ -41,7 +42,7 @@ const SectionHomePart5 = () => {
           </figure>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 
