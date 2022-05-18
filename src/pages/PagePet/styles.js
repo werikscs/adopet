@@ -11,11 +11,11 @@ export const GenericContainer = styled.div`
 `;
 
 export const Main = styled.main`
-  width: 100%;
+  width: 90%;
   max-width: 768px;
   min-width: var(--min-width);
   height: fit-content;
-
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   gap: 16px;
