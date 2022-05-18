@@ -51,11 +51,13 @@ html{
 body, input, button, textarea{
     font-family: 'Hind', sans-serif;
     font-size: 1rem;
+    color: var(--color-text)
 }
 
 h1, h2, h3, h4, h5, h6{
     font-family: 'Baloo Chettan 2', cursive;
     font-weight: 700;
+    color: var(--color-title)
 }
 
 button{
