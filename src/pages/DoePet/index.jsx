@@ -75,7 +75,8 @@ const DoePet = () => {
             name="size"
             register={register}
             error={errors.size?.message}
-            isForm>
+            isForm
+          >
             <option value="small">Pequeno</option>
             <option value="medium">Medio</option>
             <option value="large">Grande</option>
@@ -87,7 +88,8 @@ const DoePet = () => {
             name="species"
             register={register}
             error={errors.species?.message}
-            isForm>
+            isForm
+          >
             <option value="cat">Gato</option>
             <option value="dog">Cachorro</option>
           </DivSelect>
@@ -99,7 +101,8 @@ const DoePet = () => {
             name="sex"
             register={register}
             error={errors.sex?.message}
-            isForm>
+            isForm
+          >
             <option value="f">Femea</option>
             <option value="m">Macho</option>
           </DivSelect>
@@ -117,7 +120,8 @@ const DoePet = () => {
           <S.DivButtons>
             <ButtonOutlined
               type="button"
-              callback={() => console.log("voltar")}>
+              callback={() => console.log("voltar")}
+            >
               voltar
             </ButtonOutlined>
             <Button type="submit" orangeSchema>

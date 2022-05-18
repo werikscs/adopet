@@ -28,7 +28,7 @@ export const InputContainer = styled.div`
   height: 45px;
   display: flex;
   transition: 0.4s;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 
   input {
     background: transparent;
@@ -36,6 +36,7 @@ export const InputContainer = styled.div`
     flex: 1;
     border: 0;
     color: var(--color-title);
+    height: 18px;
   }
 
   svg {

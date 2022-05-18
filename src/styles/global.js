@@ -32,6 +32,8 @@ export default createGlobalStyle`
     --color-title-50: rgba(51, 52, 55, 0.5);
     --color-text: #606060;
     --color-bg-homept1: #e0e0e0;
+    --color-toast-error: #e74c3c;
+    --color-toast-success: #07bc0c;
 
     --max-width: 1440px;
     --min-width: 360px;

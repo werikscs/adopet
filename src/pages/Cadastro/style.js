@@ -3,6 +3,9 @@ import signupDogs from "../../assets/signupDogs.jpg";
 
 export const Container = styled.div`
   background-image: url(${signupDogs});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +15,7 @@ export const Container = styled.div`
 
   form {
     margin: 50px 0;
-    width: 90%;
+    width: 85%;
     padding: 20px;
     background-color: rgba(255, 198, 74, 0.7);
     border-radius: 8px;
@@ -23,6 +26,7 @@ export const Container = styled.div`
       color: #fff;
       font-size: 2rem;
       align-self: center;
+      padding-bottom: 10px;
     }
 
     p {
@@ -36,6 +40,7 @@ export const Container = styled.div`
     h3,
     h4 {
       align-self: center;
+      padding-top: 20px;
     }
 
     h4 {
@@ -44,7 +49,7 @@ export const Container = styled.div`
   }
 
   button {
-    margin: 10px auto 0;
+    margin: 20px auto 0;
   }
 
   @media screen and (min-width: 768px) {
