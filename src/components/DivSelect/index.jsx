@@ -28,11 +28,14 @@ const DivSelect = ({
           placeholder={placeholder}
           bgColor="#fff"
           border="2px"
+          borderRadius={"lg"}
           borderColor={isForm ? "#FF8E15" : "#fff"}
           h="54px"
           pb={isForm ? "0" : "16px"}
-          fontSize="1.25rem"
+          fontSize="1.2rem"
           fontWeight="600"
+          fontFamily={"Baloo Chettan 2"}
+          padding={"0"}
           color="rgba(51,52,55,0.6)"
           _hover={{
             borderColor: "#FF8E15",
@@ -40,8 +43,7 @@ const DivSelect = ({
           _focus={{
             borderColor: "#FF8E15",
           }}
-          onChange={(e) => filter(e.target.value)}
-        >
+          onChange={(e) => filter(e.target.value)}>
           {children}
         </Select>
       </ChakraProvider>
