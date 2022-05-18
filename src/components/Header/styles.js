@@ -125,7 +125,7 @@ export const Content = styled.nav`
     justify-content: center;
     align-items: center;
     padding: 0;
-    gap: 36px;
+    gap: 24px;
   }
   li {
     width: 100%;
@@ -175,7 +175,7 @@ export const Content = styled.nav`
       max-height: 100vh;
       visibility: visible;
       overflow: hidden;
-      padding: 48px 0;
+      padding: 24px 0;
       margin: 0;
     `}
 
@@ -280,11 +280,17 @@ export const DivInfoUser = styled.div`
     flex-direction: column;
     justify-content: center;
 
+    overflow: hidden;
+
     h5 {
       font-size: 1.25rem;
       font-weight: 700;
 
       color: var(--color-title);
+
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
 
     h6 {
@@ -317,7 +323,7 @@ export const DivInfoUser = styled.div`
 
     margin-left: 0;
 
-    padding: 0 0 16px;
+    padding: 0 0 8px;
 
     > img {
       margin-left: 60px;
