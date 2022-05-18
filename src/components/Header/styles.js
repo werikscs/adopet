@@ -105,21 +105,16 @@ export const Content = styled.nav`
   display: block;
   width: 100%;
   height: 0px;
-
   position: fixed;
   top: 100px;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 9999;
-
   background: #ffebc5;
-
   overflow-y: hidden;
   visibility: hidden;
-
   transition: ease 0.7s;
-
   border-top: 1px solid rgba(200, 200, 200, 0.5);
 
   ul {
@@ -134,12 +129,12 @@ export const Content = styled.nav`
   }
   li {
     width: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
     order: 1;
   }
+
   a {
     width: 280px;
 
@@ -219,20 +214,36 @@ export const Content = styled.nav`
     }
     li {
       display: block;
-
       width: fit-content;
-
       order: 0;
-
       padding: 0;
       margin: 0;
+      margin-left: 2px;
       /* font-size: 0.8rem; */
       /* text-align: center;
       width: fit-content; */
 
       a {
         width: fit-content;
+        transition: 0.35s;
       }
+      transition: 0.3s ease;
+    }
+    li:hover {
+      a {
+        color: var(--color-first);
+        transition: 0.35s;
+      }
+      /* padding: 0px 3px 0px 3px;
+      border-radius: 6px;
+      background-color: var(--input-background-color-primary);
+      box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+      transition: ease 0.3s;
+      a {
+        color: #fff;
+      } */
     }
     button {
       order: 0;

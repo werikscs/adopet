@@ -18,6 +18,8 @@ export const Container = styled.div`
   top: 100px;
 
   overflow-y: auto;
+
+  position: relative;
 `;
 export const ContentTotal = styled.div`
   width: 100%;
@@ -40,7 +42,8 @@ export const ContentTotal = styled.div`
   @media (min-width: 1024px) {
     flex-direction: row;
     align-items: stretch;
-    justify-content: space-around;
+    justify-content: flex-end;
+    position: relative;
     max-width: 1440px;
   }
 `;
@@ -54,15 +57,16 @@ export const ContentFiltro = styled.div`
 
   align-items: center;
 
-  /* position: fixed;
-  top: 100px;
-  z-index: 10; */
+  position: fixed;
+  z-index: 10;
 
   background-color: white;
   /* padding-top: 2rem; */
   padding: 16px 0;
   @media (min-width: 1024px) {
     max-width: 30%;
+    left: 0;
+    position: absolute;
   }
   > div {
     display: flex;
@@ -117,12 +121,15 @@ export const ContentFiltro = styled.div`
 
 export const ContentList = styled.div`
   width: 100%;
+  height: 100%;
+  min-height: 100vh;
   /* max-width: 600px; */
   /* margin-top: 1rem; */
 
   display: flex;
   justify-content: center;
 
+  padding-top: 82px;
   padding-bottom: 100px;
 
   /* padding-top: 55px; */
@@ -130,6 +137,8 @@ export const ContentList = styled.div`
   > ul {
     /* justify-content: cen; */
     gap: 16px;
+
+    height: fit-content;
 
     max-width: calc(206px * 3);
 
@@ -143,9 +152,11 @@ export const ContentList = styled.div`
 
     padding-top: 16px;
 
+    width: 70%;
+
     > ul {
       width: 100%;
-      max-width: 70%;
+      max-width: 100%;
     }
 
     > ul li {
