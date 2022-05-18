@@ -12,18 +12,20 @@ export const ContentInput = styled.div`
   > label {
     padding-left: 16px;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    font-family: "Baloo Chettan 2", cursive;
   }
   > input {
     width: 100%;
     height: 54px;
-    border-radius: 5px;
+    border-radius: 8px;
     border: 2px solid transparent;
+    padding: 16px;
 
     &::placeholder {
       font-weight: 600;
-      font-size: 1.1rem;
-      padding-left: 16px;
+      font-size: 1.2rem;
+      /* padding-left: 16px; */
       font-family: "Baloo Chettan 2", cursive;
       color: var(--color-text);
     }
