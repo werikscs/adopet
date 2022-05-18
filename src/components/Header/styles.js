@@ -174,8 +174,8 @@ export const Content = styled.nav`
       height: 100%;
       max-height: 100vh;
       visibility: visible;
-      overflow: hidden;
-      padding: 24px 0;
+      overflow-y: scroll;
+      padding: 100px 0;
       margin: 0;
     `}
 
