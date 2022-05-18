@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Redirect } from "react-router-dom";
 
 import api from "../../services/api";
@@ -14,32 +14,38 @@ import defaultImg from "../../assets/proprietario-default-img.svg";
 import Button from "../Button";
 
 import { Container, Content, DivInfoUser, ExternalContainer } from "./styles";
+import { useHistory } from "react-router-dom";
+import { UserContext } from "../../providers/User";
 
 const Header = () => {
-  const [isLogged, setIsLogged] = useState(true);
-  const [dataOwner, setDataOwner] = useState({});
+  const history = useHistory();
+
   const [handleButton, setHandleButton] = useState(false);
 
-  const getUserById = (userId) => {
-    api.get(`/644/users/${userId}`).then((res) => setDataOwner(res.data));
-  };
+  const { id } = JSON.parse(localStorage.getItem("infoUser"));
+
+  const { userData, updateUserData } = useContext(UserContext);
 
   const buttonClick = () => {
     setHandleButton(!handleButton);
   };
 
   const loggoutAndGoToHome = () => {
-    // console.log("aaaa");
-    // localStorage.clear();
-    setIsLogged(!isLogged);
-    // return <Redirect to="/" />;
+    updateUserData({});
+    localStorage.clear();
+    history.push("/");
   };
 
-  const login = () => {
-    setIsLogged(!isLogged);
+  const getUserById = (id) => {
+    api
+      .get("/644/users/" + id)
+      .then((res) => updateUserData(res.data))
+      .catch((err) => console.log(err));
   };
 
-  console.log(isLogged);
+  useEffect(() => {
+    if (id) getUserById(id);
+  });
 
   return (
     <ExternalContainer>
@@ -71,17 +77,17 @@ const Header = () => {
                 Contribua
               </Link>
             </li>
-            {isLogged ? (
+            {userData.id ? (
               <DivInfoUser>
-                <img src={dataOwner.avatar || defaultImg} alt="" />
+                <img src={userData.avatar || defaultImg} alt="" />
                 <div>
-                  <h5>{dataOwner.name || "João da Silva"}</h5>
+                  <h5>{userData.name || "undefined"}</h5>
                   <h6>perfil</h6>
                 </div>
                 <button onClick={loggoutAndGoToHome}>SAIR</button>
               </DivInfoUser>
             ) : (
-              <Button isLogged onClick={login}>
+              <Button isLogged onClick={() => history.push("/login")}>
                 Entrar
               </Button>
             )}
