@@ -2,12 +2,18 @@ import styled, { css } from "styled-components";
 
 export const ExternalContainer = styled.div`
   width: 100%;
-  height: 13vh;
+  height: 100px;
 
   display: flex;
   justify-content: center;
 
   background-color: #ffebc5;
+
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 0px 0px;
 `;
 
 export const Container = styled.header`
@@ -21,14 +27,6 @@ export const Container = styled.header`
   height: 100px;
 
   background-color: #ffebc5;
-
-  position: fixed;
-  top: 0;
-  z-index: 99999;
-
-  /* box-shadow: 0px 6px 5px -3px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 0px 6px 5px -3px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 6px 5px -3px rgba(0, 0, 0, 0.75); */
 
   .logo--content {
     /* width: 30%; */
