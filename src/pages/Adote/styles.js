@@ -50,7 +50,7 @@ export const ContentTotal = styled.div`
 
 export const ContentFiltro = styled.div`
   width: 100%;
-  max-width: 500px;
+  max-width: 618px;
 
   display: flex;
   flex-direction: column;
@@ -62,7 +62,7 @@ export const ContentFiltro = styled.div`
 
   background-color: white;
   /* padding-top: 2rem; */
-  padding: 16px 0;
+  padding: 16px;
   @media (min-width: 1024px) {
     max-width: 30%;
     left: 0;
@@ -103,7 +103,7 @@ export const ContentFiltro = styled.div`
     font-family: "Baloo Chettan 2", cursive;
     font-size: 1.5rem;
     height: 50px;
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,6 +145,11 @@ export const ContentList = styled.div`
     overflow: hidden;
 
     padding-top: 0;
+  }
+
+  > ul li {
+    margin: 0;
+    box-shadow: none;
   }
   @media (min-width: 1024px) {
     /* width: 100%; */
