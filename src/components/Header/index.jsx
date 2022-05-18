@@ -29,6 +29,9 @@ const Header = () => {
   const buttonClick = () => {
     setHandleButton(!handleButton);
   };
+  const closeMenu = () => {
+    setHandleButton(false);
+  };
 
   const loggoutAndGoToHome = () => {
     updateUserData({});
@@ -50,29 +53,29 @@ const Header = () => {
   return (
     <ExternalContainer>
       <Container>
-        <Link className="logo--content" to="/">
+        <Link className="logo--content" to="/" onClick={closeMenu}>
           <img src={Logo} alt="Logo" />
         </Link>
 
         <Content handleButton={handleButton}>
           <ul>
             <li>
-              <Link to="/">
+              <Link to="/" onClick={closeMenu}>
                 <img src={HomeIcon} alt="Home" /> Início
               </Link>
             </li>
             <li>
-              <Link to="/adote">
+              <Link to="/adote" onClick={closeMenu}>
                 <img src={AddIcon} alt="Add" /> Adote um Pet
               </Link>
             </li>
             <li>
-              <Link to="/user/pets">
+              <Link to="/user/pets" onClick={closeMenu}>
                 <img src={SortIcon} alt="Sort" /> Doe um Pet
               </Link>
             </li>
             <li>
-              <Link to="/">
+              <Link to="/" onClick={closeMenu}>
                 <img src={GiftIcon} alt="Gift" />
                 Contribua
               </Link>
@@ -97,7 +100,8 @@ const Header = () => {
         <button
           id="burger"
           className={handleButton ? "burger active" : "burger "}
-          onClick={() => buttonClick()}>
+          onClick={() => buttonClick()}
+        >
           <span className="btn--burger"></span>
         </button>
       </Container>
