@@ -21,10 +21,12 @@ import {
   useDisclosure,
   Button,
   ChakraProvider,
+  Spinner,
 } from "@chakra-ui/react";
 import InputSeach from "../../components/inputSeach";
 
 const Adote = () => {
+  const [loading, setLoading] = useState(true);
   const [sex, setSex] = useState("");
   const [species, setSpecies] = useState("");
   const [size, setSizes] = useState("");
@@ -37,9 +39,11 @@ const Adote = () => {
   const [listpets, setListpets] = useState([]);
 
   const filters = () => {
+    setLoading(true);
     api.get(`/animals?${name}${sex}${species}${size}`).then((res) => {
       console.log(res.data);
       setListpets(res.data);
+      setLoading(false);
     });
   };
 
@@ -192,7 +196,13 @@ const Adote = () => {
           </ChakraProvider>
         </ContentFiltro>
         <ContentList>
-          {listpets.length > 0 ? (
+          {loading ? (
+            <div>
+              <ChakraProvider>
+                <Spinner w="200px" h="200px" color="var(--color-first)" />
+              </ChakraProvider>
+            </div>
+          ) : listpets.length > 0 ? (
             <ListCard listPets={listpets} isAdote />
           ) : (
             <div>
