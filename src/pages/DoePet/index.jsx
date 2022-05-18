@@ -147,10 +147,7 @@ const DoePet = () => {
           />
 
           <S.DivButtons>
-            <ButtonOutlined
-              type="button"
-              callback={() => history.push("/adote")}
-            >
+            <ButtonOutlined type="button" callback={() => history.push("/")}>
               voltar
             </ButtonOutlined>
             <Button type="submit" orangeSchema>
