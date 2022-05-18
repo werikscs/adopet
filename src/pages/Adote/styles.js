@@ -133,7 +133,7 @@ export const ContentList = styled.div`
   justify-content: center;
 
   padding-top: 82px;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
 
   /* padding-top: 55px; */
 
