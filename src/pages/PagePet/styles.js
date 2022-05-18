@@ -4,7 +4,7 @@ export const GenericContainer = styled.div`
   width: 100%;
   min-height: 100vh;
 
-  background-color: var(--color-second-50);
+  background-color: rosybrown;
 
   display: flex;
   justify-content: center;
