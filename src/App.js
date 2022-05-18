@@ -21,7 +21,7 @@ function App() {
         draggable
         pauseOnHover
       />
-      <ToastContainer />
+
       {/* <Signup /> */}
       <Routers />
     </>

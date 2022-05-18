@@ -14,17 +14,39 @@ import * as S from "./styles";
 import InputTextArea from "../../components/InputTextArea";
 import DivSelect from "../../components/DivSelect";
 
+import { UserContext } from "../../providers/User";
+import { useContext } from "react";
+import { toast } from "react-toastify";
+import { useEffect } from "react";
+
 const DoePet = () => {
   const history = useHistory();
 
+  const userInfoLocalStorage =
+    JSON.parse(localStorage.getItem("infoUser")) || {};
+
+  useEffect(() => {
+    if (!userInfoLocalStorage.id) {
+      history.push("/login");
+    }
+  }, []);
+
   const formSchema = yup.object().shape({
     name: yup.string().required("Campo Obrigatório!"),
-    img: yup.string().required("Campo Obrigatório!"),
+    img: yup
+      .string()
+      .required("Campo Obrigatório!")
+      .matches(
+        /^https?:\/\/.*\/.*\.(png|gif|webp|jpeg|jpg)($|\?.*$)/,
+        "Precisar ser uma URL"
+      ),
     moreInfo: yup.string().required("Campo Obrigatório!"),
     species: yup.string().required("Campo Obrigatório!"),
     sex: yup.string().required("Campo Obrigatório!"),
     size: yup.string().required("Campo Obrigatório!"),
   });
+
+  const { userData } = useContext(UserContext);
 
   const {
     register,
@@ -33,17 +55,24 @@ const DoePet = () => {
   } = useForm({ resolver: yupResolver(formSchema) });
 
   const onSubmit = (data) => {
-    console.log(data);
-    // adicionar o userId
-    // chamar registerPet
+    data.userId = userData.id;
+    registerPet(data);
   };
 
   const registerPet = (dataBody) => {
-    api.post("/644/animals", dataBody, {
-      headers: {
-        Authorization: `Bearer ${"token"}`,
-      },
-    });
+    api
+      .post("/644/animals", dataBody, {
+        headers: {
+          Authorization: `Bearer ${userInfoLocalStorage.token}`,
+        },
+      })
+      .then((res) => {
+        toast.success("O Pet foi cadastrado");
+        history.push("/");
+      })
+      .catch((err) => {
+        toast.error("Ops! Houve algum erro");
+      });
   };
 
   return (
@@ -118,10 +147,7 @@ const DoePet = () => {
           />
 
           <S.DivButtons>
-            <ButtonOutlined
-              type="button"
-              callback={() => console.log("voltar")}
-            >
+            <ButtonOutlined type="button" callback={() => history.push("/")}>
               voltar
             </ButtonOutlined>
             <Button type="submit" orangeSchema>
