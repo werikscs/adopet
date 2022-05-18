@@ -28,7 +28,7 @@ export const ContentFiltro = styled.div`
   max-width: 500px;
   flex-direction: column;
   align-items: center;
-  padding-top: 1rem;
+  padding-top: 2rem;
   @media (min-width: 1024px) {
     width: 32%;
   }
