@@ -144,6 +144,7 @@ export const Content = styled.nav`
 
     font-size: 1.25rem;
     font-weight: bold;
+    font-family: "Hind";
 
     text-decoration: none;
 
@@ -281,13 +282,14 @@ export const DivInfoUser = styled.div`
 
     h5 {
       font-size: 1.25rem;
+      font-weight: 700;
 
       color: var(--color-title);
     }
 
     h6 {
       font-size: 1rem;
-
+      font-weight: 700;
       color: var(--color-title-50);
 
       margin-top: -10px;
