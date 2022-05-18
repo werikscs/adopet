@@ -14,9 +14,15 @@ import * as S from "./styles";
 import InputTextArea from "../../components/InputTextArea";
 import DivSelect from "../../components/DivSelect";
 
+import { Redirect } from "react-router-dom";
+
 const DoePet = () => {
   const history = useHistory();
 
+ const user = JSON.parse(localStorage.getItem("infoUser"))
+ 
+
+ 
   const formSchema = yup.object().shape({
     name: yup.string().required("Campo Obrigatório!"),
     img: yup.string().required("Campo Obrigatório!"),
@@ -45,6 +51,11 @@ const DoePet = () => {
       },
     });
   };
+
+  if(!user) {
+    return <Redirect to="/login"/>
+  }
+
 
   return (
     <S.GenericContainer>
