@@ -32,6 +32,8 @@ export default createGlobalStyle`
     --color-title-50: rgba(51, 52, 55, 0.5);
     --color-text: #606060;
     --color-bg-homept1: #e0e0e0;
+    --color-toast-error: #e74c3c;
+    --color-toast-success: #07bc0c;
 
     --max-width: 1440px;
     --min-width: 360px;
@@ -51,11 +53,13 @@ html{
 body, input, button, textarea{
     font-family: 'Hind', sans-serif;
     font-size: 1rem;
+    color: var(--color-text)
 }
 
 h1, h2, h3, h4, h5, h6{
     font-family: 'Baloo Chettan 2', cursive;
     font-weight: 700;
+    color: var(--color-title)
 }
 
 button{

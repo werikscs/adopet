@@ -30,8 +30,14 @@ const Header = () => {
   const buttonClick = () => {
     setHandleButton(!handleButton);
   };
+
   const closeMenu = () => {
     setHandleButton(false);
+  };
+
+  const goToLogin = () => {
+    closeMenu();
+    history.push("/login");
   };
 
   const loggoutAndGoToHome = () => {
@@ -91,7 +97,7 @@ const Header = () => {
                 <button onClick={loggoutAndGoToHome}>SAIR</button>
               </DivInfoUser>
             ) : (
-              <Button isLogged onClick={() => history.push("/login")}>
+              <Button isLogged onClick={goToLogin}>
                 Entrar
               </Button>
             )}
@@ -101,8 +107,7 @@ const Header = () => {
         <button
           id="burger"
           className={handleButton ? "burger active" : "burger "}
-          onClick={() => buttonClick()}
-        >
+          onClick={() => buttonClick()}>
           <span className="btn--burger"></span>
         </button>
       </Container>

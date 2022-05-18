@@ -7,12 +7,13 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Link, useHistory } from "react-router-dom";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const Cadastro = () => {
   const token = JSON.parse(localStorage.getItem("token"));
   const history = useHistory();
   const axios = require("axios").default;
-  const BASE_URL = "http://localhost:3001/";
+  const BASE_URL = "https://adopet-api-cm3.herokuapp.com";
   const [signupError, setSignupError] = useState("");
 
   const formSchema = yup.object().shape({
@@ -43,6 +44,7 @@ const Cadastro = () => {
   });
 
   const onSubmit = (data) => {
+    console.log(data);
     axios({
       method: "post",
       url: `${BASE_URL}/register`,
@@ -56,11 +58,18 @@ const Cadastro = () => {
       },
     })
       .then((response) => {
-        response.status === 201
-          ? history.push("/login")
-          : console.log(response);
+        // response.status === 201
+        //   ?history.push("/login")
+        //   : console.log(response);
+        console.log(response);
+        toast.success("Cadastrado com sucesso");
+        history.push("/login");
       })
-      .catch((err) => setSignupError(err.response.data));
+      .catch((err) => {
+        console.log(err);
+        setSignupError(err.response.data);
+        toast.error("Esse email já foi cadastrado");
+      });
   };
 
   return !token ? (
@@ -68,7 +77,6 @@ const Cadastro = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <h1>Cadastro</h1>
         <Input
-          orangeSchema="orangeSchema"
           label="Nome*"
           type="text"
           name="name"
@@ -77,7 +85,6 @@ const Cadastro = () => {
           register={register}
         />
         <Input
-          orangeSchema="orangeSchema"
           label="Email*"
           type="email"
           name="email"
@@ -86,7 +93,6 @@ const Cadastro = () => {
           register={register}
         />
         <Input
-          orangeSchema="orangeSchema"
           label="Senha*"
           type="password"
           name="password"
@@ -95,7 +101,6 @@ const Cadastro = () => {
           register={register}
         />
         <Input
-          orangeSchema="orangeSchema"
           label="Confirme sua senha*"
           type="password"
           placeholder="Digite a senha novamente"
@@ -104,7 +109,6 @@ const Cadastro = () => {
           register={register}
         />
         <Input
-          orangeSchema="orangeSchema"
           label="Avatar"
           type="avatar"
           name="avatar"
@@ -114,7 +118,7 @@ const Cadastro = () => {
         />
         <label htmlFor="type">Tipo</label>
 
-        <Select name="type" register={register} orangeSchema="orangeSchema" />
+        <Select name="type" register={register} />
 
         {signupError !== "" ? <h4>{signupError}</h4> : <></>}
         <Button type="submit">Registrar</Button>

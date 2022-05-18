@@ -2,35 +2,71 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: 80vh;
+  height: 100vh;
+  /* height: 80vh; */
+
+  /* padding-top: 100px; */
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+
+  background-color: rosybrown;
+
+  position: fixed;
+  top: 100px;
+
+  overflow-y: auto;
+
+  position: relative;
 `;
 export const ContentTotal = styled.div`
   width: 100%;
-  height: 80vh;
+  height: fit-content;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  background-color: white;
+
+  /* padding-top: 490px;
+  padding-bottom: 100px;
+
+  @media screen and (min-width: 466px) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  } */
+
   @media (min-width: 1024px) {
     flex-direction: row;
     align-items: stretch;
-    justify-content: space-around;
+    justify-content: flex-end;
+    position: relative;
     max-width: 1440px;
   }
 `;
 
 export const ContentFiltro = styled.div`
   width: 100%;
-  display: flex;
   max-width: 500px;
+
+  display: flex;
   flex-direction: column;
+
   align-items: center;
-  padding-top: 2rem;
+
+  position: fixed;
+  z-index: 10;
+
+  background-color: white;
+  /* padding-top: 2rem; */
+  padding: 16px 0;
   @media (min-width: 1024px) {
-    width: 32%;
+    max-width: 30%;
+    left: 0;
+    position: absolute;
   }
   > div {
     display: flex;
@@ -69,6 +105,7 @@ export const ContentFiltro = styled.div`
     height: 50px;
     width: 90%;
     display: flex;
+    justify-content: center;
     align-items: center;
     border-radius: 10px;
     @media (min-width: 1023px) {
@@ -84,11 +121,47 @@ export const ContentFiltro = styled.div`
 
 export const ContentList = styled.div`
   width: 100%;
-  max-width: 600px;
-  margin-top: 1rem;
+  height: 100%;
+  min-height: 100vh;
+  /* max-width: 600px; */
+  /* margin-top: 1rem; */
+
+  display: flex;
+  justify-content: center;
+
+  padding-top: 82px;
+  padding-bottom: 100px;
+
+  /* padding-top: 55px; */
+
+  > ul {
+    /* justify-content: cen; */
+    gap: 16px;
+
+    height: fit-content;
+
+    max-width: calc(206px * 3);
+
+    overflow: hidden;
+
+    padding-top: 0;
+  }
   @media (min-width: 1024px) {
-    width: 66%;
+    /* width: 100%; */
     max-width: 1440px;
+
+    padding-top: 16px;
+
+    width: 70%;
+
+    > ul {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    > ul li {
+      margin: 0;
+    }
   }
   > div {
     display: flex;
