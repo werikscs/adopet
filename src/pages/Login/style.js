@@ -24,6 +24,7 @@ export const Container = styled.div`
   form {
     margin: 50px 0;
     width: 85%;
+    max-width: 600px;
     padding: 20px;
     background-color: rgba(255, 198, 74, 0.7);
     border-radius: 8px;
@@ -43,6 +44,9 @@ export const Container = styled.div`
 
     label {
       margin-bottom: -10px;
+      color: var(--color-title);
+      font-weight: 600;
+      font-size: 1.1rem;
     }
 
     h3,

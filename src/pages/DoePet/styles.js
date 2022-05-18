@@ -16,7 +16,7 @@ export const GenericContainer = styled.div`
 
 export const Main = styled.main`
   width: 100%;
-  max-width: 768px;
+  align-items: center;
   min-width: var(--min-width);
   height: fit-content;
 
@@ -45,7 +45,7 @@ export const Main = styled.main`
 
 export const Form = styled.form`
   width: 100%;
-
+  max-width: 768px;
   display: flex;
   flex-direction: column;
   gap: 16px;
