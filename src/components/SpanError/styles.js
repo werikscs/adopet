@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Span = styled.span`
-  color: var(--color-text);
+  color: var(--color-third);
 
   padding-left: 16px;
 

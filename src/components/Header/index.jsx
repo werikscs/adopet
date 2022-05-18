@@ -77,7 +77,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/user/pets" onClick={closeMenu}>
+              <Link to="/user/doe" onClick={closeMenu}>
                 <img src={SortIcon} alt="Sort" /> Doe um Pet
               </Link>
             </li>
@@ -107,7 +107,8 @@ const Header = () => {
         <button
           id="burger"
           className={handleButton ? "burger active" : "burger "}
-          onClick={() => buttonClick()}>
+          onClick={() => buttonClick()}
+        >
           <span className="btn--burger"></span>
         </button>
       </Container>

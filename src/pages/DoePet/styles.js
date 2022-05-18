@@ -8,6 +8,10 @@ export const GenericContainer = styled.div`
 
   display: flex;
   justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100px;
 `;
 
 export const Main = styled.main`
