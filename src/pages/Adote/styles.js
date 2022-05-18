@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  height: auto;
   /* height: 80vh; */
 
   /* padding-top: 100px; */
@@ -17,7 +17,7 @@ export const Container = styled.div`
   position: fixed;
   top: 100px;
 
-  overflow-y: auto;
+  overflow: initial;
 
   position: relative;
 `;
@@ -50,6 +50,7 @@ export const ContentTotal = styled.div`
 
 export const ContentFiltro = styled.div`
   width: 100%;
+
   max-width: 618px;
 
   display: flex;
@@ -60,11 +61,13 @@ export const ContentFiltro = styled.div`
   position: fixed;
   z-index: 10;
 
-  background-color: white;
+  background-color: var(--color-fourth);
+  border: 1px solid var(--color-fourth);
   /* padding-top: 2rem; */
   padding: 16px;
   @media (min-width: 1024px) {
-    max-width: 30%;
+    width: 30%;
+    max-width: 425px;
     left: 0;
     position: absolute;
   }
