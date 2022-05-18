@@ -1,7 +1,7 @@
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 import * as yup from "yup";
-import { Container } from "./style.js";
+import { Container, ExternalContainer } from "./style.js";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Link, useHistory } from "react-router-dom";
@@ -62,34 +62,36 @@ const Login = () => {
   };
 
   return !token ? (
-    <Container>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <h1>Login</h1>
+    <ExternalContainer>
+      <Container>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <h1>Login</h1>
 
-        <Input
-          label="Email"
-          type="text"
-          name="email"
-          placeholder="Digite seu email"
-          error={errors.email?.message}
-          register={register}
-        />
+          <Input
+            label="Email"
+            type="text"
+            name="email"
+            placeholder="Digite seu email"
+            error={errors.email?.message}
+            register={register}
+          />
 
-        <Input
-          label="Senha"
-          type="password"
-          name="password"
-          placeholder="Digite sua senha"
-          error={errors.password?.message}
-          register={register}
-        />
-        {signinError !== "" ? <h4>{signinError}</h4> : <></>}
-        <Button type="submit">Entrar</Button>
-        <h3>
-          Ainda não possui uma conta? <Link to="/cadastro">Cadastre-se</Link>
-        </h3>
-      </form>
-    </Container>
+          <Input
+            label="Senha"
+            type="password"
+            name="password"
+            placeholder="Digite sua senha"
+            error={errors.password?.message}
+            register={register}
+          />
+          {signinError !== "" ? <h4>{signinError}</h4> : <></>}
+          <Button type="submit">Entrar</Button>
+          <h3>
+            Ainda não possui uma conta? <Link to="/cadastro">Cadastre-se</Link>
+          </h3>
+        </form>
+      </Container>
+    </ExternalContainer>
   ) : (
     history.push("/")
   );
