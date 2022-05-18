@@ -41,8 +41,8 @@ const Header = () => {
   };
 
   const loggoutAndGoToHome = () => {
-    updateUserData({});
     localStorage.clear();
+    updateUserData({});
     history.push("/");
   };
 
@@ -55,7 +55,7 @@ const Header = () => {
 
   useEffect(() => {
     if (userInfoLocalStorage.id) getUserById(userInfoLocalStorage.id);
-  });
+  }, []);
 
   return (
     <ExternalContainer>
@@ -107,8 +107,7 @@ const Header = () => {
         <button
           id="burger"
           className={handleButton ? "burger active" : "burger "}
-          onClick={() => buttonClick()}
-        >
+          onClick={() => buttonClick()}>
           <span className="btn--burger"></span>
         </button>
       </Container>

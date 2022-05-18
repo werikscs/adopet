@@ -1,11 +1,18 @@
 import styled from "styled-components";
 import fundoLogin from "../../assets/loginDogs.png";
 
-export const Container = styled.div`
+export const ExternalContainer = styled.div`
+  width: 100%;
+  height: 100vh;
   background-image: url(${fundoLogin});
   background-position: left center;
   background-repeat: no-repeat;
   background-size: cover;
+`;
+
+export const Container = styled.div`
+  backdrop-filter: blur(7px);
+
   display: flex;
   align-items: center;
   justify-content: center;
