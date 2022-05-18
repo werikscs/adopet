@@ -35,7 +35,6 @@ export const ContainerListPets = styled.div`
   }
 
   > div {
-    background-color: var(--color-bg-homept1);
     width: 100%;
     max-width: 1440px;
     background-color: var(--color-bg-homept1);
