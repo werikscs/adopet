@@ -144,6 +144,7 @@ export const Content = styled.nav`
 
     font-size: 1.25rem;
     font-weight: bold;
+    font-family: "Hind";
 
     text-decoration: none;
 
