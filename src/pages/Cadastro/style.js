@@ -9,12 +9,15 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  position: absolute;
   width: 100%;
-  top: 100px;
-
+  padding-top: 100px;
+  @media (min-height: 850px) {
+    height: 100vh;
+  }
   form {
     margin: 50px 0;
+    max-width: 900px;
     width: 85%;
     padding: 20px;
     background-color: rgba(255, 198, 74, 0.7);
