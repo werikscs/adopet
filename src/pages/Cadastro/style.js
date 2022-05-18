@@ -17,7 +17,7 @@ export const Container = styled.div`
   }
   form {
     margin: 50px 0;
-    max-width: 900px;
+    max-width: 600px;
     width: 85%;
     padding: 20px;
     background-color: rgba(255, 198, 74, 0.7);

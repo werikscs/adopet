@@ -24,6 +24,7 @@ export const Container = styled.div`
   form {
     margin: 50px 0;
     width: 85%;
+    max-width: 600px;
     padding: 20px;
     background-color: rgba(255, 198, 74, 0.7);
     border-radius: 8px;
