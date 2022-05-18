@@ -91,7 +91,10 @@ const Header = () => {
                 <button onClick={loggoutAndGoToHome}>SAIR</button>
               </DivInfoUser>
             ) : (
-              <Button isLogged onClick={() => history.push("/login")}>
+              <Button
+                isLogged
+                onClick={(() => history.push("/login"), closeMenu)}
+              >
                 Entrar
               </Button>
             )}
