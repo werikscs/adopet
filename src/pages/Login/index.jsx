@@ -5,13 +5,19 @@ import { Container } from "./style.js";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Link, useHistory } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { UserContext } from "../../providers/User";
 
 const Login = () => {
+  const BASE_URL = "https://adopet-api-cm3.herokuapp.com";
+
   const history = useHistory();
+  const { updateUserData } = useContext(UserContext);
+
   const axios = require("axios").default;
-  const BASE_URL = "http://localhost:3001";
+
   const token = JSON.parse(localStorage.getItem("token"));
+
   const [signinError, setSigninError] = useState("");
 
   const formSchema = yup.object().shape({
@@ -38,10 +44,12 @@ const Login = () => {
     })
       .then((response) => {
         if (response.status === 200) {
-          localStorage.setItem(
-            "token",
-            JSON.stringify(response.data.accessToken)
-          );
+          updateUserData(response.data.user);
+          const infoUser = {
+            token: response.data.accessToken,
+            id: response.data.user.id,
+          };
+          localStorage.setItem("infoUser", JSON.stringify(infoUser));
         }
         history.push("/");
       })
@@ -56,7 +64,7 @@ const Login = () => {
         <Input
           orangeSchema="orangeSchema"
           label="Email"
-          type="email"
+          type="text"
           name="email"
           placeholder="Digite seu email"
           error={errors.email?.message}
