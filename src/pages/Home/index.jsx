@@ -19,7 +19,6 @@ const Home = () => {
 
   const getListPets = () => {
     api.get(`/animals?_page=1&_limit=9`).then((res) => {
-      console.log(res.data);
       setlistPet(res.data);
     });
   };
