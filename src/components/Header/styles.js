@@ -225,11 +225,16 @@ export const Content = styled.nav`
 
       a {
         width: fit-content;
+        transition: 0.35s;
       }
       transition: 0.3s ease;
     }
     li:hover {
-      padding: 0px 3px 0px 3px;
+      a {
+        color: var(--color-first);
+        transition: 0.35s;
+      }
+      /* padding: 0px 3px 0px 3px;
       border-radius: 6px;
       background-color: var(--input-background-color-primary);
       box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
@@ -238,7 +243,7 @@ export const Content = styled.nav`
       transition: ease 0.3s;
       a {
         color: #fff;
-      }
+      } */
     }
     button {
       order: 0;
