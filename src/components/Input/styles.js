@@ -28,7 +28,7 @@ export const InputContainer = styled.div`
   height: 45px;
   display: flex;
   transition: 0.4s;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 
   input {
     background: transparent;

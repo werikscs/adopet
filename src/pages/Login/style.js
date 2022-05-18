@@ -3,6 +3,9 @@ import fundoLogin from "../../assets/loginDogs.png";
 
 export const Container = styled.div`
   background-image: url(${fundoLogin});
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,7 +16,7 @@ export const Container = styled.div`
 
   form {
     margin: 50px 0;
-    width: 90%;
+    width: 85%;
     padding: 20px;
     background-color: rgba(255, 198, 74, 0.7);
     border-radius: 8px;
@@ -47,7 +50,7 @@ export const Container = styled.div`
   }
 
   button {
-    margin: 30px auto 0;
+    margin: 50px auto 0;
   }
 
   @media screen and (min-width: 768px) {

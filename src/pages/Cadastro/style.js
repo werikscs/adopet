@@ -3,6 +3,9 @@ import signupDogs from "../../assets/signupDogs.jpg";
 
 export const Container = styled.div`
   background-image: url(${signupDogs});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
