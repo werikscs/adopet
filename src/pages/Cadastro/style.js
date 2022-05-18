@@ -6,7 +6,9 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 87vh;
+  position: relative;
+  width: 100%;
+  top: 100px;
 
   form {
     margin: 50px 0;

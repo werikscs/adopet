@@ -6,7 +6,10 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 87vh;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 50px;
 
   form {
     margin: 50px 0;
