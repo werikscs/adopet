@@ -178,7 +178,8 @@ const Adote = () => {
                     variant="solid"
                     mr={3}
                     size="lg"
-                    color="var(--color-first)"
+                    color="#ffffff"
+                    bg="var(--color-first)"
                     onClick={onClose}>
                     Voltar
                   </Button>
