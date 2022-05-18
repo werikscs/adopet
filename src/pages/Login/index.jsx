@@ -7,6 +7,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { Link, useHistory } from "react-router-dom";
 import { useContext, useState } from "react";
 import { UserContext } from "../../providers/User";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const BASE_URL = "https://adopet-api-cm3.herokuapp.com";
@@ -49,11 +50,15 @@ const Login = () => {
             token: response.data.accessToken,
             id: response.data.user.id,
           };
+          toast.success("Você foi logado");
           localStorage.setItem("infoUser", JSON.stringify(infoUser));
         }
         history.push("/");
       })
-      .catch((err) => setSigninError(err.response.data));
+      .catch((err) => {
+        toast.error("Senha incorreta");
+        setSigninError(err.response.data);
+      });
   };
 
   return !token ? (

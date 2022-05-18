@@ -22,7 +22,8 @@ const Header = () => {
 
   const [handleButton, setHandleButton] = useState(false);
 
-  const { id } = JSON.parse(localStorage.getItem("infoUser") | "");
+  const userInfoLocalStorage =
+    JSON.parse(localStorage.getItem("infoUser")) || {};
 
   const { userData, updateUserData } = useContext(UserContext);
 
@@ -44,7 +45,7 @@ const Header = () => {
   };
 
   useEffect(() => {
-    if (id) getUserById(id);
+    if (userInfoLocalStorage.id) getUserById(userInfoLocalStorage.id);
   });
 
   return (
