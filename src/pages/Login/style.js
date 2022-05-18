@@ -43,6 +43,9 @@ export const Container = styled.div`
 
     label {
       margin-bottom: -10px;
+      color: var(--color-title);
+      font-weight: 600;
+      font-size: 1.1rem;
     }
 
     h3,
