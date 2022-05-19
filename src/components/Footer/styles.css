@@ -1,0 +1,38 @@
+.footer {
+  padding: 0;
+}
+
+.footer__home {
+  width: 100%;
+  max-width: var(--max-width);
+
+  background-color: var(--color-footer);
+
+  padding-top: 16px;
+
+  /* margin-top: 3em; */
+}
+
+.has-text-centered {
+  height: 280px;
+
+  padding-top: 32px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.paragraph__title--footer {
+  color: var(--color-seven);
+  font-family: "Baloo Chettan 2", cursive;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.paragraph__footer {
+  color: var(--color-seven);
+  font-family: "Hind", sans-serif;
+  font-size: 1rem;
+}

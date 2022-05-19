@@ -18,7 +18,7 @@
 
 ---
 
-## Folder Contents
+## Folders Contents
 
 - #### assets: images, svgs, app logo, ...
 
