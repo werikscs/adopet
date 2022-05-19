@@ -98,17 +98,12 @@ const Adote = () => {
               <option value="m">Macho</option>
             </DivSelect>
           </div>
-          {/* mobile */}
+
           <button onClick={() => resetFilter()}>
             <img src={iconFilter} alt="icon filter" /> Pesquisar por filtro
           </button>
           <ChakraProvider>
-            <Drawer
-              isOpen={isOpen}
-              placement="right"
-              onClose={onClose}
-              // finalFocusRef={btnRef}
-            >
+            <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
               <DrawerOverlay />
               <DrawerContent bgColor="var(--color-second)">
                 <DrawerHeader
@@ -119,22 +114,18 @@ const Adote = () => {
                   color="var(--color-first)"
                   fontWeight="600"
                   fontSize="1.4rem"
-                  // borderBottomColor="var(--color-first)"
                   borderBottomWidth="1px"
                   pb="10px"
                   pt="10px">
                   <img src={iconFilter} alt="icon filter" /> Pesquisar por
                   Filtro
-                  {/* <DrawerCloseButton /> */}
                 </DrawerHeader>
 
                 <DrawerBody
                   display="flex"
                   flexDirection="column"
                   w="100%"
-                  pl="15px"
-                  // overflowY="scroll"
-                >
+                  pl="15px">
                   <div>
                     <InputSeach setName={setName} />
                     <DivSelect
