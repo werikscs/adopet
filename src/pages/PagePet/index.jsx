@@ -1,7 +1,9 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useState } from "react";
 
 import { useParams, useHistory } from "react-router-dom";
+
+import { UserContext } from "../../providers/User";
 
 import api from "../../services/api";
 
@@ -9,6 +11,7 @@ import defaultImg from "../../assets/proprietario-default-img.svg";
 
 import ButtonOutlined from "../../components/ButtonOutlined";
 import Button from "../../components/Button";
+
 import * as S from "./styles";
 
 const PagePet = () => {
@@ -18,6 +21,8 @@ const PagePet = () => {
   const params = useParams();
   const history = useHistory();
 
+  const { userData } = useContext(UserContext);
+
   const getAnimalById = (id) => {
     api.get(`/644/animals/${id}`).then((res) => setDataPet(res.data));
   };
@@ -26,13 +31,21 @@ const PagePet = () => {
     api.get(`/644/users/${userId}`).then((res) => setDataOwner(res.data));
   };
 
+  const wantToAdopt = () => {
+    if (userData.id) {
+      console.log("adotado!");
+    } else {
+      history.push("/login");
+    }
+  };
+
   useEffect(() => {
     getAnimalById(params.id);
   }, []);
 
   useEffect(() => {
     if (dataPet.userId) getUserById(dataPet.userId);
-  });
+  }, [dataPet]);
 
   return (
     <S.GenericContainer>
@@ -78,7 +91,13 @@ const PagePet = () => {
           <ButtonOutlined callback={() => history.push("/")}>
             voltar
           </ButtonOutlined>
-          <Button onClick={() => console.log("Quero Adotar")} orangeSchema>
+          {dataPet.userId === userData.id && (
+            <ButtonOutlined
+              callback={() => history.push(`/user/pet/${dataPet.id}`)}>
+              Editar Pet
+            </ButtonOutlined>
+          )}
+          <Button onClick={wantToAdopt} orangeSchema>
             Quero Adotar
           </Button>
         </S.DivButtons>
