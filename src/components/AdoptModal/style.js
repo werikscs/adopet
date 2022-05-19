@@ -42,9 +42,11 @@ export const Container = styled.div`
     padding: 0 30px;
 
     aside {
+      height: fit-content;
       img {
-        margin: 0 auto;
-        width: 100px;
+        width: 80px;
+        border-radius: 8px;
+        object-fit: cover;
       }
     }
   }
@@ -78,9 +80,12 @@ export const Container = styled.div`
   footer {
     height: 25%;
     width: 100%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 16px;
+
     padding: 10px 30px;
 
     a {

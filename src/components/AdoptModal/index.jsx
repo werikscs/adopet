@@ -5,8 +5,6 @@ import { Container } from "./style.js";
 const WantAdopt = ({ handleClose, show, dataOwner }) => {
   const showHideClassName = show ? "modal display-block" : "modal display-none";
 
-  console.log(dataOwner);
-
   return (
     <Container>
       <div className={showHideClassName}>
@@ -25,15 +23,14 @@ const WantAdopt = ({ handleClose, show, dataOwner }) => {
           </aside>
         </section>
         <footer>
-          <ButtonOutlined onClick={handleClose}>Voltar</ButtonOutlined>
+          <ButtonOutlined onClick={handleClose}>voltar</ButtonOutlined>
           <Button orangeSchema>
             {" "}
             <a
               href={`https://web.whatsapp.com/send?phone=55${dataOwner.phone}`}
               target={"_blank"}
-              rel="noreferrer"
-            >
-              Entrar em contato
+              rel="noreferrer">
+              Whatsapp
             </a>
           </Button>
         </footer>
