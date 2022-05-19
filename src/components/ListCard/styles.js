@@ -4,8 +4,6 @@ export const Ul = styled.ul`
   width: 100%;
   max-width: 1200px;
   height: 100%;
-  /* min-height: 400px;
-  max-height: 400px; */
 
   display: flex;
   align-items: center;
@@ -17,12 +15,7 @@ export const Ul = styled.ul`
   overflow-x: ${(props) => (props.isAdote ? "hidden" : "scroll")};
   overflow-y: ${(props) => (props.isAdote ? "scroll" : "hidden")};
 
-  /* background-color: var(--color-fifth); */
-  /* background-color: var(--color-fourth); */
-
   @media (min-width: 1024px) {
-    /* max-height: none; */
-    /* padding: 2%; */
     flex-wrap: wrap;
     justify-content: space-evenly;
     flex-direction: row;
@@ -33,6 +26,5 @@ export const Ul = styled.ul`
 
     background-color: ${(props) =>
       props.isAdote ? "#fff" : "var(--color-bg-homept1)"};
-    /* border-radius: 20px; */
   }
 `;

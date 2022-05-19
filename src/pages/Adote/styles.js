@@ -58,7 +58,9 @@ export const ContentFiltro = styled.div`
 
   background-color: var(--color-fourth);
   border: 1px solid var(--color-fourth);
+  
   padding: 16px;
+  
   @media (min-width: 1024px) {
     width: 30%;
     max-width: 425px;
@@ -151,7 +153,7 @@ export const ContentList = styled.div`
   @media (min-width: 1024px) {
     max-width: 1440px;
 
-    padding-top: 16px;
+    padding-top: 8px;
 
     width: 70%;
 
