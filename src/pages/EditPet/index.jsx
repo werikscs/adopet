@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 
@@ -15,8 +15,6 @@ import InputTextArea from "../../components/InputTextArea";
 import InputInternal from "../../components/InputInternal";
 
 import * as S from "./styles";
-
-import { UserContext } from "../../providers/User";
 
 import { toast } from "react-toastify";
 
@@ -75,6 +73,22 @@ const EditPet = () => {
       });
   };
 
+  const deletePet = () => {
+    api
+      .delete(`/644/animals/${petId}`, {
+        headers: {
+          Authorization: `Bearer ${userInfoLocalStorage.token}`,
+        },
+      })
+      .then((res) => {
+        toast.success("Pet Excluído!");
+        history.push(`/adote`);
+      })
+      .catch((err) => {
+        toast.error("Ops! Houve algum erro");
+      });
+  };
+
   return (
     <S.GenericContainer>
       <S.Main>
@@ -111,6 +125,9 @@ const EditPet = () => {
               type="button"
               callback={() => history.push(`/adote/${petId}`)}>
               voltar
+            </ButtonOutlined>
+            <ButtonOutlined type="button" callback={deletePet}>
+              Excluir Pet
             </ButtonOutlined>
             <Button type="submit" orangeSchema>
               Salvar Alterações
