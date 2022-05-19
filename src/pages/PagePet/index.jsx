@@ -11,12 +11,14 @@ import defaultImg from "../../assets/proprietario-default-img.svg";
 
 import ButtonOutlined from "../../components/ButtonOutlined";
 import Button from "../../components/Button";
+import WantAdopt from "../../components/AdoptModal";
 
 import * as S from "./styles";
 
 const PagePet = () => {
   const [dataPet, setDataPet] = useState({});
   const [dataOwner, setDataOwner] = useState({});
+  const [openModal, setOpenModal] = useState(false);
 
   const params = useParams();
   const history = useHistory();
@@ -31,9 +33,17 @@ const PagePet = () => {
     api.get(`/644/users/${userId}`).then((res) => setDataOwner(res.data));
   };
 
+  const showModal = (data) => {
+    setOpenModal(true);
+  };
+
+  const hideModal = () => {
+    setOpenModal(false);
+  };
+
   const wantToAdopt = () => {
     if (userData.id) {
-      console.log("adotado!");
+      showModal();
     } else {
       history.push("/login");
     }
@@ -85,8 +95,14 @@ const PagePet = () => {
           <span>{dataPet.moreInfo}</span>
         </S.DivInfoPet>
 
+        <WantAdopt
+          dataOwner={dataOwner}
+          handleClose={hideModal}
+          show={openModal}
+        />
+
         <S.DivButtons>
-          <ButtonOutlined callback={() => history.push("/")}>
+          <ButtonOutlined callback={() => history.goBack()}>
             voltar
           </ButtonOutlined>
           {dataPet.userId === userData.id && (
