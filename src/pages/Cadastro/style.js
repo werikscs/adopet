@@ -50,6 +50,7 @@ export const Container = styled.div`
     }
 
     h4 {
+      font-size: 1.1rem;
       color: var(--color-error-form);
     }
   }

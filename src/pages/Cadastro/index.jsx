@@ -58,17 +58,12 @@ const Cadastro = () => {
       },
     })
       .then((response) => {
-        // response.status === 201
-        //   ?history.push("/login")
-        //   : console.log(response);
-        console.log(response);
         toast.success("Cadastrado com sucesso");
         history.push("/login");
       })
       .catch((err) => {
-        console.log(err);
-        setSignupError(err.response.data);
         toast.error("Esse email já foi cadastrado");
+        setSignupError("Falha ao cadastrar ");
       });
   };
 
