@@ -88,7 +88,7 @@ const PagePet = () => {
         </S.DivInfoPet>
 
         <S.DivButtons>
-          <ButtonOutlined callback={() => history.push("/")}>
+          <ButtonOutlined callback={() => history.goBack()}>
             voltar
           </ButtonOutlined>
           {dataPet.userId === userData.id && (

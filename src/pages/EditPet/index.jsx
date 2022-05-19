@@ -121,9 +121,7 @@ const EditPet = () => {
           )}
 
           <S.DivButtons>
-            <ButtonOutlined
-              type="button"
-              callback={() => history.push(`/adote/${petId}`)}>
+            <ButtonOutlined type="button" callback={() => history.goBack()}>
               voltar
             </ButtonOutlined>
             <ButtonOutlined type="button" callback={deletePet}>
