@@ -124,11 +124,16 @@ export const DivInfoPet = styled.div`
   margin-bottom: 56px;
 
   h1 {
+    font-size: 2rem;
     text-transform: capitalize;
   }
 
+  h2 {
+    font-size: 1.25rem;
+  }
+
   span {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 `;
 
@@ -136,6 +141,7 @@ export const DivButtons = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
 
   padding: 16px 0;
 
@@ -143,4 +149,8 @@ export const DivButtons = styled.div`
   max-width: 768px;
 
   background-color: var(--color-second-50);
+
+  button:nth-child(2) {
+    margin-left: auto;
+  }
 `;
