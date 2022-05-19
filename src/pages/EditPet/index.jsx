@@ -136,30 +136,27 @@ const EditPet = () => {
           )}
 
           <S.DivButtons>
-            <ButtonOutlined
-              type="button"
-              callback={() => history.push(`/adote/${petId}`)}
-            >
+            <ButtonOutlined type="button" callback={() => history.goBack()}>
               voltar
             </ButtonOutlined>
+
             <ButtonOutlined type="button" callback={onOpen}>
               Excluir Pet
             </ButtonOutlined>
+
             <ChakraProvider resetCSS={false}>
               <AlertDialog isOpen={isOpen} l onClose={onClose}>
                 <AlertDialogOverlay>
                   <AlertDialogContent
                     mt="10rem"
-                    fontFamily="'Baloo Chettan 2', cursive"
-                  >
+                    fontFamily="'Baloo Chettan 2', cursive">
                     <AlertDialogHeader
                       fontWeight="bold"
                       bgColor="var(--color-icons)"
                       color="var(--color-seven)"
                       fontSize="1.3rem"
                       borderTopRightRadius="6px"
-                      borderTopLeftRadius="6px"
-                    >
+                      borderTopLeftRadius="6px">
                       Deletar
                     </AlertDialogHeader>
 
@@ -170,15 +167,13 @@ const EditPet = () => {
 
                     <AlertDialogFooter
                       display="flex"
-                      justifyContent="space-between"
-                    >
+                      justifyContent="space-between">
                       <ButtonOutlined onClick={onClose}>Cancel</ButtonOutlined>
                       <Button
                         colorScheme="red"
                         onClick={() => deletePet()}
                         ml={3}
-                        orangeSchema
-                      >
+                        orangeSchema>
                         Delete
                       </Button>
                     </AlertDialogFooter>

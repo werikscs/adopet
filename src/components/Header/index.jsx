@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
-import { Redirect } from "react-router-dom";
 
 import api from "../../services/api";
 
@@ -77,7 +76,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/user/doe" onClick={closeMenu}>
+              <Link to="/user/pets" onClick={closeMenu}>
                 <img src={SortIcon} alt="Sort" /> Doe um Pet
               </Link>
             </li>
@@ -107,8 +106,7 @@ const Header = () => {
         <button
           id="burger"
           className={handleButton ? "burger active" : "burger "}
-          onClick={() => buttonClick()}
-        >
+          onClick={() => buttonClick()}>
           <span className="btn--burger"></span>
         </button>
       </Container>
