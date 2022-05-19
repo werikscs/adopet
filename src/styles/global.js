@@ -39,6 +39,9 @@ export default createGlobalStyle`
 
     --max-width: 1440px;
     --min-width: 360px;
+
+    --toastify-color-light: #fff9f2;
+    --toastify-color-error: #FF6853;
 }
 
 html{
