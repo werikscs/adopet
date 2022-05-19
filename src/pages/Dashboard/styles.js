@@ -108,7 +108,7 @@ export const ContentFiltro = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border-radius: 10px; */
+
     @media (min-width: 1024px) {
       display: none;
       border-radius: 10px;
@@ -147,7 +147,6 @@ export const ContentList = styled.div`
     height: 50px;
 
     padding: 0 16px;
-    /* margin-bottom: 16px; */
 
     border-bottom: 1px solid var(--color-first);
 
@@ -185,7 +184,6 @@ export const ContentList = styled.div`
   }
 
   @media (min-width: 1024px) {
-    /* width: 100%; */
     max-width: 1440px;
 
     padding-top: 0px;
@@ -205,7 +203,6 @@ export const ContentList = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding: 20px; */
 
     > img {
       width: 200px;

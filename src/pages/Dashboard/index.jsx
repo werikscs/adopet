@@ -54,7 +54,6 @@ const Dashboard = () => {
       });
   };
 
-  // chakra
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const resetFilter = () => {
@@ -64,7 +63,6 @@ const Dashboard = () => {
     setSizes("");
     setSpecies("");
   };
-  // const btnRef = React.useRef()
 
   return (
     <Container>
@@ -80,7 +78,8 @@ const Dashboard = () => {
               placeholder="qualquer"
               name="size="
               error={""}
-              setSelect={setSizes}>
+              setSelect={setSizes}
+            >
               <option value="small">Pequeno</option>
               <option value="medium">Medio</option>
               <option value="large">Grande</option>
@@ -91,7 +90,8 @@ const Dashboard = () => {
               placeholder="qualquer"
               name="species="
               error={""}
-              setSelect={setSpecies}>
+              setSelect={setSpecies}
+            >
               <option value="cat">Gato</option>
               <option value="dog">Cachorro</option>
             </DivSelect>
@@ -102,22 +102,18 @@ const Dashboard = () => {
               placeholder="qualquer"
               name="sex="
               error={""}
-              setSelect={setSex}>
+              setSelect={setSex}
+            >
               <option value="f">Femea</option>
               <option value="m">Macho</option>
             </DivSelect>
           </div>
-          {/* mobile */}
+
           <button onClick={() => resetFilter()}>
             <img src={iconFilter} alt="icon filter" /> Pesquisar por filtro
           </button>
           <ChakraProvider>
-            <Drawer
-              isOpen={isOpen}
-              placement="right"
-              onClose={onClose}
-              // finalFocusRef={btnRef}
-            >
+            <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
               <DrawerOverlay />
               <DrawerContent bgColor="var(--color-second)">
                 <DrawerHeader
@@ -128,13 +124,12 @@ const Dashboard = () => {
                   color="var(--color-first)"
                   fontWeight="600"
                   fontSize="1.4rem"
-                  // borderBottomColor="var(--color-first)"
                   borderBottomWidth="1px"
                   pb="10px"
-                  pt="10px">
+                  pt="10px"
+                >
                   <img src={iconFilter} alt="icon filter" /> Pesquisar por
                   Filtro
-                  {/* <DrawerCloseButton /> */}
                 </DrawerHeader>
 
                 <DrawerBody
@@ -142,7 +137,6 @@ const Dashboard = () => {
                   flexDirection="column"
                   w="100%"
                   pl="15px"
-                  // overflowY="scroll"
                 >
                   <div>
                     <InputSeach setName={setName} />
@@ -151,7 +145,8 @@ const Dashboard = () => {
                       placeholder="qualquer"
                       name="size="
                       error={""}
-                      setSelect={setSizes}>
+                      setSelect={setSizes}
+                    >
                       <option value="small">Pequeno</option>
                       <option value="medium">Medio</option>
                       <option value="large">Grande</option>
@@ -162,7 +157,8 @@ const Dashboard = () => {
                       placeholder="qualquer"
                       name="species="
                       error={""}
-                      setSelect={setSpecies}>
+                      setSelect={setSpecies}
+                    >
                       <option value="cat">Gato</option>
                       <option value="dog">Cachorro</option>
                     </DivSelect>
@@ -173,7 +169,8 @@ const Dashboard = () => {
                       placeholder="qualquer"
                       name="sex="
                       error={""}
-                      setSelect={setSex}>
+                      setSelect={setSex}
+                    >
                       <option value="f">Femea</option>
                       <option value="m">Macho</option>
                     </DivSelect>
@@ -187,7 +184,8 @@ const Dashboard = () => {
                     size="lg"
                     color="#ffffff"
                     bg="var(--color-first)"
-                    onClick={onClose}>
+                    onClick={onClose}
+                  >
                     Voltar
                   </Button>
                 </DrawerFooter>
@@ -200,7 +198,8 @@ const Dashboard = () => {
             <h1>Meus Pets</h1>
             <ButtonComponent
               orangeSchema
-              onClick={() => history.push("/user/doe")}>
+              onClick={() => history.push("/user/doe")}
+            >
               Cadastrar Pet
             </ButtonComponent>
           </div>

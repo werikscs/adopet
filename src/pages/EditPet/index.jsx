@@ -85,7 +85,6 @@ const EditPet = () => {
   };
 
   const { isOpen, onOpen, onClose } = useDisclosure();
-  // const cancelRef = React.useRef()
 
   const deletePet = () => {
     api
@@ -149,14 +148,16 @@ const EditPet = () => {
                 <AlertDialogOverlay>
                   <AlertDialogContent
                     mt="10rem"
-                    fontFamily="'Baloo Chettan 2', cursive">
+                    fontFamily="'Baloo Chettan 2', cursive"
+                  >
                     <AlertDialogHeader
                       fontWeight="bold"
                       bgColor="var(--color-icons)"
                       color="var(--color-seven)"
                       fontSize="1.3rem"
                       borderTopRightRadius="6px"
-                      borderTopLeftRadius="6px">
+                      borderTopLeftRadius="6px"
+                    >
                       Deletar
                     </AlertDialogHeader>
 
@@ -167,13 +168,15 @@ const EditPet = () => {
 
                     <AlertDialogFooter
                       display="flex"
-                      justifyContent="space-between">
+                      justifyContent="space-between"
+                    >
                       <ButtonOutlined onClick={onClose}>Cancel</ButtonOutlined>
                       <Button
                         colorScheme="red"
                         onClick={() => deletePet()}
                         ml={3}
-                        orangeSchema>
+                        orangeSchema
+                      >
                         Delete
                       </Button>
                     </AlertDialogFooter>

@@ -9,6 +9,7 @@ import api from "../../services/api";
 import Button from "../../components/Button";
 import ButtonOutlined from "../../components/ButtonOutlined";
 import InputInternal from "../../components/InputInternal";
+import FooterChat from "../../components/footer-Chat";
 
 import * as S from "./styles";
 import InputTextArea from "../../components/InputTextArea";
@@ -104,7 +105,8 @@ const DoePet = () => {
             name="size"
             register={register}
             error={errors.size?.message}
-            isForm>
+            isForm
+          >
             <option value="small">Pequeno</option>
             <option value="medium">Medio</option>
             <option value="large">Grande</option>
@@ -116,7 +118,8 @@ const DoePet = () => {
             name="species"
             register={register}
             error={errors.species?.message}
-            isForm>
+            isForm
+          >
             <option value="cat">Gato</option>
             <option value="dog">Cachorro</option>
           </DivSelect>
@@ -128,7 +131,8 @@ const DoePet = () => {
             name="sex"
             register={register}
             error={errors.sex?.message}
-            isForm>
+            isForm
+          >
             <option value="f">Femea</option>
             <option value="m">Macho</option>
           </DivSelect>
@@ -152,6 +156,7 @@ const DoePet = () => {
             </Button>
           </S.DivButtons>
         </S.Form>
+        <FooterChat />
       </S.Main>
     </S.GenericContainer>
   );

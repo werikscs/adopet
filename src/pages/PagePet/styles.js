@@ -24,12 +24,6 @@ export const Main = styled.main`
   padding: 16px;
 
   background-color: var(--color-second-50);
-
-  footer {
-    width: 100%;
-    height: 20px;
-    background-color: transparent;
-  }
 `;
 
 export const Figcaption = styled.figcaption`
