@@ -41,6 +41,7 @@ export const Container = styled.div`
       color: var(--color-title);
       font-weight: 600;
       font-size: 1.1rem;
+      padding-left: 16px;
     }
 
     h3,
