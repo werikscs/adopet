@@ -35,6 +35,8 @@ export default createGlobalStyle`
     --color-toast-error: #e74c3c;
     --color-toast-success: #07bc0c;
 
+    --color-error-form: #6b1700;
+
     --max-width: 1440px;
     --min-width: 360px;
 }

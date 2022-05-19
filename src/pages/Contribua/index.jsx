@@ -2,10 +2,12 @@ import catImg from "../../assets/gatinho-contribua.png";
 import caoSemDono from "../../assets/cao-sem-dono.webp";
 import quatroPatinhas from "../../assets/quatro-patinhas.webp";
 import projetoEsdras from "../../assets/projeto-esdras.webp";
+
 import SectionHomePart5 from "../../components/section-Home-Part5";
+
 import Footer from "../../components/Footer";
 import Button from "../../components/Button";
-import { Link } from "react-router-dom";
+
 import {
   Main,
   Section,
@@ -17,9 +19,7 @@ import {
   LiONGs,
 } from "./styles";
 
-// import { useHistory } from "react-router-dom";
 const Contribua = () => {
-  //   const history = useHistory();
   return (
     <Main>
       <Section>
@@ -63,7 +63,7 @@ const Contribua = () => {
                   <a
                     href="https://web.whatsapp.com/send?phone=5599111112222"
                     target={"_blank"}
-                  >
+                    rel="noreferrer">
                     Ajudar
                   </a>
                 </Button>
@@ -78,7 +78,7 @@ const Contribua = () => {
                   <a
                     href="https://web.whatsapp.com/send?phone=5599111112222"
                     target={"_blank"}
-                  >
+                    rel="noreferrer">
                     Ajudar
                   </a>
                 </Button>
@@ -93,7 +93,7 @@ const Contribua = () => {
                   <a
                     href="https://web.whatsapp.com/send?phone=5599111112222"
                     target={"_blank"}
-                  >
+                    rel="noreferrer">
                     Ajudar
                   </a>
                 </Button>
