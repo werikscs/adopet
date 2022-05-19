@@ -10,18 +10,21 @@ export const Container = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
-    height: 30%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
   }
 
   header {
-    background-color: #ed8172;
-    font-size: 1.2rem;
+    background-color: var(--color-first);
+    font-size: 1.25rem;
+    font-weight: bold;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #fff;
     padding: 10px 20px;
-    height: 30%;
+    height: 25%;
     color: #fff;
 
     button {
@@ -35,14 +38,15 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 70%;
+    height: 50%;
     padding: 0 30px;
 
     aside {
-      
+      height: fit-content;
       img {
-        margin: 0 auto;
-        width: 100px;
+        width: 80px;
+        border-radius: 8px;
+        object-fit: cover;
       }
     }
   }
@@ -70,6 +74,23 @@ export const Container = styled.div`
   @media screen and (min-width: 2560px) {
     div {
       width: 25%;
+    }
+  }
+
+  footer {
+    height: 25%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    padding: 10px 30px;
+
+    a {
+      text-decoration: none;
+      color: var(--color-second);
     }
   }
 `;

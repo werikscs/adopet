@@ -70,8 +70,7 @@ const Adote = () => {
               placeholder="qualquer"
               name="size="
               error={""}
-              setSelect={setSizes}
-            >
+              setSelect={setSizes}>
               <option value="small">Pequeno</option>
               <option value="medium">Medio</option>
               <option value="large">Grande</option>
@@ -82,8 +81,7 @@ const Adote = () => {
               placeholder="qualquer"
               name="species="
               error={""}
-              setSelect={setSpecies}
-            >
+              setSelect={setSpecies}>
               <option value="cat">Gato</option>
               <option value="dog">Cachorro</option>
             </DivSelect>
@@ -94,8 +92,7 @@ const Adote = () => {
               placeholder="qualquer"
               name="sex="
               error={""}
-              setSelect={setSex}
-            >
+              setSelect={setSex}>
               <option value="f">Femea</option>
               <option value="m">Macho</option>
             </DivSelect>
@@ -118,8 +115,7 @@ const Adote = () => {
                   fontSize="1.4rem"
                   borderBottomWidth="1px"
                   pb="10px"
-                  pt="10px"
-                >
+                  pt="10px">
                   <img src={iconFilter} alt="icon filter" /> Pesquisar por
                   Filtro
                 </DrawerHeader>
@@ -137,8 +133,7 @@ const Adote = () => {
                       placeholder="qualquer"
                       name="size="
                       error={""}
-                      setSelect={setSizes}
-                    >
+                      setSelect={setSizes}>
                       <option value="small">Pequeno</option>
                       <option value="medium">Medio</option>
                       <option value="large">Grande</option>
@@ -149,8 +144,7 @@ const Adote = () => {
                       placeholder="qualquer"
                       name="species="
                       error={""}
-                      setSelect={setSpecies}
-                    >
+                      setSelect={setSpecies}>
                       <option value="cat">Gato</option>
                       <option value="dog">Cachorro</option>
                     </DivSelect>
@@ -161,8 +155,7 @@ const Adote = () => {
                       placeholder="qualquer"
                       name="sex="
                       error={""}
-                      setSelect={setSex}
-                    >
+                      setSelect={setSex}>
                       <option value="f">Femea</option>
                       <option value="m">Macho</option>
                     </DivSelect>
@@ -176,8 +169,7 @@ const Adote = () => {
                     size="lg"
                     color="#ffffff"
                     bg="var(--color-first)"
-                    onClick={onClose}
-                  >
+                    onClick={onClose}>
                     Voltar
                   </Button>
                 </DrawerFooter>

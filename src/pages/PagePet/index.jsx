@@ -12,7 +12,10 @@ import defaultImg from "../../assets/proprietario-default-img.svg";
 import ButtonOutlined from "../../components/ButtonOutlined";
 import Button from "../../components/Button";
 import WantAdopt from "../../components/AdoptModal";
+<<<<<<< HEAD
 import FooterChat from "../../components/footer-Chat";
+=======
+>>>>>>> 58e657417dbfe160fb869ffd858264a190ab54f4
 
 import * as S from "./styles";
 
