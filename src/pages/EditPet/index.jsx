@@ -16,6 +16,17 @@ import InputInternal from "../../components/InputInternal";
 
 import * as S from "./styles";
 
+import {
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
+  useDisclosure,
+  ChakraProvider,
+} from "@chakra-ui/react";
+
 import { toast } from "react-toastify";
 
 const EditPet = () => {
@@ -73,6 +84,9 @@ const EditPet = () => {
       });
   };
 
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  // const cancelRef = React.useRef()
+
   const deletePet = () => {
     api
       .delete(`/644/animals/${petId}`, {
@@ -81,6 +95,7 @@ const EditPet = () => {
         },
       })
       .then((res) => {
+        onClose();
         toast.success("Pet Excluído!");
         history.push(`/adote`);
       })
@@ -123,12 +138,55 @@ const EditPet = () => {
           <S.DivButtons>
             <ButtonOutlined
               type="button"
-              callback={() => history.push(`/adote/${petId}`)}>
+              callback={() => history.push(`/adote/${petId}`)}
+            >
               voltar
             </ButtonOutlined>
-            <ButtonOutlined type="button" callback={deletePet}>
+            <ButtonOutlined type="button" callback={onOpen}>
               Excluir Pet
             </ButtonOutlined>
+            <ChakraProvider resetCSS={false}>
+              <AlertDialog isOpen={isOpen} l onClose={onClose}>
+                <AlertDialogOverlay>
+                  <AlertDialogContent
+                    mt="10rem"
+                    fontFamily="'Baloo Chettan 2', cursive"
+                  >
+                    <AlertDialogHeader
+                      fontWeight="bold"
+                      bgColor="var(--color-icons)"
+                      color="var(--color-seven)"
+                      fontSize="1.3rem"
+                      borderTopRightRadius="6px"
+                      borderTopLeftRadius="6px"
+                    >
+                      Deletar
+                    </AlertDialogHeader>
+
+                    <AlertDialogBody>
+                      Tem certeza que deseja deletar esse Pet ? Você não pode
+                      desfazer esta ação depois.
+                    </AlertDialogBody>
+
+                    <AlertDialogFooter
+                      display="flex"
+                      justifyContent="space-between"
+                    >
+                      <ButtonOutlined onClick={onClose}>Cancel</ButtonOutlined>
+                      <Button
+                        colorScheme="red"
+                        onClick={() => deletePet()}
+                        ml={3}
+                        orangeSchema
+                      >
+                        Delete
+                      </Button>
+                    </AlertDialogFooter>
+                  </AlertDialogContent>
+                </AlertDialogOverlay>
+              </AlertDialog>
+            </ChakraProvider>
+
             <Button type="submit" orangeSchema>
               Salvar Alterações
             </Button>
