@@ -69,7 +69,10 @@ export const ContentFiltro = styled.div`
     width: 30%;
     max-width: 425px;
     left: 0;
-    position: absolute;
+    position: fixed;
+  }
+  @media (min-width: 2560px) {
+    left: 22%;
   }
   > div {
     display: flex;
