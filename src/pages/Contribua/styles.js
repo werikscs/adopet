@@ -255,6 +255,11 @@ export const LiONGs = styled.li`
     margin: 1%;
   }
 
+  a {
+    text-decoration: none;
+    color: var(--color-second);
+  }
+
   > img {
     width: 290px;
     height: 200px;
