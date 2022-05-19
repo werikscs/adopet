@@ -11,6 +11,7 @@ import defaultImg from "../../assets/proprietario-default-img.svg";
 
 import ButtonOutlined from "../../components/ButtonOutlined";
 import Button from "../../components/Button";
+// import Footer from "../../components/Footer";
 
 import * as S from "./styles";
 
@@ -93,7 +94,8 @@ const PagePet = () => {
           </ButtonOutlined>
           {dataPet.userId === userData.id && (
             <ButtonOutlined
-              callback={() => history.push(`/user/pet/${dataPet.id}`)}>
+              callback={() => history.push(`/user/pet/${dataPet.id}`)}
+            >
               Editar Pet
             </ButtonOutlined>
           )}
@@ -101,6 +103,8 @@ const PagePet = () => {
             Quero Adotar
           </Button>
         </S.DivButtons>
+
+        <footer></footer>
       </S.Main>
     </S.GenericContainer>
   );
