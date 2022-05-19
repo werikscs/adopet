@@ -56,8 +56,10 @@ const Login = () => {
         history.push("/");
       })
       .catch((err) => {
-        toast.error("Senha incorreta");
-        setSigninError(err.response.data);
+        err.response.data === "Incorrect password"
+          ? toast.error("Senha Incorreta")
+          : toast.error("Email não cadastrado");
+        setSigninError("Falha ao Logar");
       });
   };
 

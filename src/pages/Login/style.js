@@ -57,6 +57,8 @@ export const Container = styled.div`
 
     h4 {
       color: #fd3700;
+      font-size: 1.1rem;
+      padding-top: 25px;
     }
   }
 
