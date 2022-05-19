@@ -44,8 +44,6 @@ export const ContainerListPets = styled.div`
       gap: 16px;
     }
 
-    /* background-color: var(--color-bg-homept1); */
-
     display: flex;
     flex-direction: column;
     align-items: center;

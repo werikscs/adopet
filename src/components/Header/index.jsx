@@ -82,7 +82,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/" onClick={closeMenu}>
+              <Link to="/contribua" onClick={closeMenu}>
                 <img src={GiftIcon} alt="Gift" />
                 Contribua
               </Link>
@@ -107,7 +107,8 @@ const Header = () => {
         <button
           id="burger"
           className={handleButton ? "burger active" : "burger "}
-          onClick={() => buttonClick()}>
+          onClick={() => buttonClick()}
+        >
           <span className="btn--burger"></span>
         </button>
       </Container>

@@ -7,6 +7,7 @@ import DoePet from "../pages/DoePet";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import PagePet from "../pages/PagePet";
+import Contribua from "../pages/Contribua";
 
 const Routers = () => {
   return (
@@ -19,6 +20,10 @@ const Routers = () => {
       {/*  */}
       <Route exact path="/cadastro">
         <Cadastro />
+      </Route>
+
+      <Route exact path="/contribua">
+        <Contribua />
       </Route>
 
       {/*  */}
