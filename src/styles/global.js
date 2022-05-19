@@ -71,4 +71,11 @@ button{
 button:hover{
     filter: brightness(90%);
 }
+
+.Toastify__toast-container{
+    position: fixed;
+    top: 116px;
+    z-index: 20;
+}
+
 `;
