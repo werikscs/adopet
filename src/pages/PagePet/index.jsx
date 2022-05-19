@@ -13,7 +13,6 @@ import ButtonOutlined from "../../components/ButtonOutlined";
 import Button from "../../components/Button";
 import WantAdopt from "../../components/AdoptModal";
 
-
 import * as S from "./styles";
 
 const PagePet = () => {
@@ -61,12 +60,10 @@ const PagePet = () => {
   return (
     <S.GenericContainer>
       <S.Main>
-        {/* imagem grande do animal */}
         <S.Figcaption>
           <img src={dataPet.img} alt="" />
         </S.Figcaption>
 
-        {/* outras imagens do animal */}
         <S.DivMoreImgs>
           <img src={dataPet.img} alt="" />
           <img src={dataPet.img} alt="" />

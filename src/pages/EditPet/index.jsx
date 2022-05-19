@@ -85,7 +85,7 @@ const EditPet = () => {
   };
 
   const { isOpen, onOpen, onClose } = useDisclosure();
-  // const cancelRef = React.useRef()
+  
 
   const deletePet = () => {
     api
