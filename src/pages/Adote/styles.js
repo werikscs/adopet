@@ -84,15 +84,21 @@ export const ContentFiltro = styled.div`
 
     > h2 {
       color: var(--color-first);
+
       font-weight: 600;
       font-family: "Baloo Chettan 2", cursive;
-      font-size: 1.5rem;
+      font-size: 1.35rem;
+
       height: 50px;
       width: 100%;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       border-bottom: 1px solid var(--color-first);
+
+      padding: 4px;
 
       > img {
         margin-right: 10px;
