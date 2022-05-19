@@ -61,6 +61,7 @@ export const ContentFiltro = styled.div`
     background-color: transparent;
     padding-right: 16px;
     padding-top: 16px;
+    border: none;
   }
   > div {
     display: flex;
