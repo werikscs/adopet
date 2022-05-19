@@ -76,7 +76,9 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/user/pets" onClick={closeMenu}>
+              <Link
+                to={userInfoLocalStorage.id ? "/user/pets" : "/login"}
+                onClick={closeMenu}>
                 <img src={SortIcon} alt="Sort" /> Doe um Pet
               </Link>
             </li>
