@@ -11,6 +11,7 @@ export const GenericContainer = styled.div`
 `;
 
 export const Main = styled.main`
+  margin-left: 5px;
   width: 90%;
   max-width: 768px;
   min-width: var(--min-width);
@@ -128,6 +129,7 @@ export const DivInfoPet = styled.div`
   gap: 14px;
 
   margin-bottom: 56px;
+  margin-left: 5px;
 
   h1 {
     font-size: 2rem;
@@ -155,6 +157,10 @@ export const DivButtons = styled.div`
   max-width: 768px;
 
   background-color: var(--color-second-50);
+
+  button {
+    line-height: 16px;
+  }
 
   button:nth-child(2) {
     margin-left: auto;
