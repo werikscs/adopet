@@ -185,8 +185,8 @@ const Adote = () => {
                     size="lg"
                     color="#ffffff"
                     bg="var(--color-first)"
-                    onClick={onClose}>
-
+                    onClick={onClose}
+                  >
                     Voltar
                   </Button>
                 </DrawerFooter>
@@ -214,6 +214,7 @@ const Adote = () => {
           )}
         </ContentList>
       </ContentTotal>
+      <footer></footer>
     </Container>
   );
 };

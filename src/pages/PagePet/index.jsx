@@ -13,6 +13,7 @@ import ButtonOutlined from "../../components/ButtonOutlined";
 import Button from "../../components/Button";
 import WantAdopt from "../../components/AdoptModal";
 
+
 import * as S from "./styles";
 
 const PagePet = () => {
@@ -118,6 +119,8 @@ const PagePet = () => {
             Quero Adotar
           </Button>
         </S.DivButtons>
+
+        <footer></footer>
       </S.Main>
     </S.GenericContainer>
   );

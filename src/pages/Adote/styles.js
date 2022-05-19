@@ -20,6 +20,12 @@ export const Container = styled.div`
   overflow: initial;
 
   position: relative;
+
+  footer {
+    width: 100%;
+    height: 40px;
+    background-color: var(--color-fourth);
+  }
 `;
 export const ContentTotal = styled.div`
   width: 100%;
