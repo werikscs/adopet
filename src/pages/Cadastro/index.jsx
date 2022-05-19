@@ -81,7 +81,7 @@ const Cadastro = () => {
         />
         <Input
           label="Email*"
-          type="email"
+          type="text"
           name="email"
           placeholder="Digite seu email"
           error={errors.email?.message}

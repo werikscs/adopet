@@ -50,8 +50,8 @@ export const Container = styled.div`
     }
 
     h4 {
-      color: #fd3700;
       font-size: 1.1rem;
+      color: var(--color-error-form);
     }
   }
 
