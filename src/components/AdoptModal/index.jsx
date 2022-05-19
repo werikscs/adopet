@@ -1,9 +1,9 @@
+import Button from "../Button";
+import ButtonOutlined from "../ButtonOutlined";
 import { Container } from "./style.js";
 
 const WantAdopt = ({ handleClose, show, dataOwner }) => {
   const showHideClassName = show ? "modal display-block" : "modal display-none";
-
-  console.log(dataOwner);
 
   return (
     <Container>
@@ -22,6 +22,18 @@ const WantAdopt = ({ handleClose, show, dataOwner }) => {
             <img src={dataOwner.avatar} alt={dataOwner.name} />
           </aside>
         </section>
+        <footer>
+          <ButtonOutlined onClick={handleClose}>voltar</ButtonOutlined>
+          <Button orangeSchema>
+            {" "}
+            <a
+              href={`https://web.whatsapp.com/send?phone=55${dataOwner.phone}`}
+              target={"_blank"}
+              rel="noreferrer">
+              Whatsapp
+            </a>
+          </Button>
+        </footer>
       </div>
     </Container>
   );

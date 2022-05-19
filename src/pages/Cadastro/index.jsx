@@ -51,7 +51,6 @@ const Cadastro = () => {
   });
 
   const onSubmit = (data) => {
-    console.log(data);
     axios({
       method: "post",
       url: `${BASE_URL}/register`,

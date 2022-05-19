@@ -3,9 +3,6 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: auto;
-  /* height: 80vh; */
-
-  /* padding-top: 100px; */
 
   display: flex;
   flex-direction: column;
@@ -61,8 +58,9 @@ export const ContentFiltro = styled.div`
 
   background-color: var(--color-fourth);
   border: 1px solid var(--color-fourth);
-
+  
   padding: 16px;
+  
   @media (min-width: 1024px) {
     width: 30%;
     max-width: 425px;

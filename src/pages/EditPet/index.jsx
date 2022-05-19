@@ -85,7 +85,6 @@ const EditPet = () => {
   };
 
   const { isOpen, onOpen, onClose } = useDisclosure();
-  // const cancelRef = React.useRef()
 
   const deletePet = () => {
     api
@@ -141,7 +140,7 @@ const EditPet = () => {
             </ButtonOutlined>
 
             <ButtonOutlined type="button" callback={onOpen}>
-              Excluir Pet
+              Excluir
             </ButtonOutlined>
 
             <ChakraProvider resetCSS={false}>
@@ -183,7 +182,7 @@ const EditPet = () => {
             </ChakraProvider>
 
             <Button type="submit" orangeSchema>
-              Salvar Alterações
+              Salvar
             </Button>
           </S.DivButtons>
         </S.Form>
