@@ -4,7 +4,7 @@ export const Container = styled.div`
   text-align: left;
 
   span {
-    color: #fd3700;
+    color: var(--color-error-form);
     font-size: 0.9rem;
   }
 `;
