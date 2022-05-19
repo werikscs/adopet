@@ -75,10 +75,7 @@ export const ContentFiltro = styled.div`
     width: 30%;
     max-width: 425px;
     left: 0;
-    position: fixed;
-  }
-  @media (min-width: 2560px) {
-    left: 22%;
+    position: absolute;
   }
   > div {
     display: flex;
@@ -162,13 +159,13 @@ export const ContentList = styled.div`
 
     overflow: hidden;
 
-    padding-top: 0;
+    padding-top: 8px;
   }
 
   > ul li {
-    margin: 0;
     box-shadow: none;
   }
+
   @media (min-width: 1024px) {
     /* width: 100%; */
     max-width: 1440px;
