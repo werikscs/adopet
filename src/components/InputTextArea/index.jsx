@@ -2,18 +2,28 @@ import { useState } from "react";
 import SpanError from "../SpanError";
 import { DivTextArea } from "./styles";
 
-const InputTextArea = ({ label, name, register, error = "", ...rest }) => {
-  const [textArea, setTextArea] = useState("");
+const InputTextArea = ({
+  label,
+  name,
+  register,
+  error = "",
+  text = "",
+  ...rest
+}) => {
+  // console.log(text);
+  const [textArea, setTextArea] = useState(text);
+  // console.log(textArea);
 
   return (
     <DivTextArea>
       <label>{label}</label>
+      {/* {console.log(text)} */}
       <textarea
         {...register(name)}
         {...rest}
         name="moreInfo"
-        onChange={(e) => setTextArea(e.target.value)}
         value={textArea}
+        onChange={(e) => setTextArea(e.target.value)}
       />
       {error && !Boolean(textArea.trim()) && <SpanError message={error} />}
     </DivTextArea>
