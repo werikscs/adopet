@@ -3,9 +3,6 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: auto;
-  /* height: 80vh; */
-
-  /* padding-top: 100px; */
 
   display: flex;
   flex-direction: column;
@@ -37,14 +34,6 @@ export const ContentTotal = styled.div`
 
   background-color: white;
 
-  /* padding-top: 490px;
-  padding-bottom: 100px;
-
-  @media screen and (min-width: 466px) {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  } */
-
   @media (min-width: 1024px) {
     flex-direction: row;
     align-items: stretch;
@@ -69,7 +58,6 @@ export const ContentFiltro = styled.div`
 
   background-color: var(--color-fourth);
   border: 1px solid var(--color-fourth);
-  /* padding-top: 2rem; */
   padding: 16px;
   @media (min-width: 1024px) {
     width: 30%;
@@ -138,19 +126,13 @@ export const ContentList = styled.div`
   width: 100%;
   height: 100%;
   min-height: 100vh;
-  /* max-width: 600px; */
-  /* margin-top: 1rem; */
 
   display: flex;
   justify-content: center;
 
   padding-top: 82px;
-  /* padding-bottom: 100px; */
-
-  /* padding-top: 55px; */
 
   > ul {
-    /* justify-content: cen; */
     gap: 16px;
 
     height: fit-content;
@@ -167,7 +149,6 @@ export const ContentList = styled.div`
     box-shadow: none;
   }
   @media (min-width: 1024px) {
-    /* width: 100%; */
     max-width: 1440px;
 
     padding-top: 16px;

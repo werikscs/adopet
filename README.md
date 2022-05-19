@@ -71,4 +71,4 @@ Porém é importante dizer que nos como plataforma apenas conecta as pessoas ou 
 
 ### [Adopet](https://adopet-m3.vercel.app/)
 
-### [JSON Server](https://github.com/werikscs/json-server-base)
+### [Fake API](https://github.com/werikscs/json-server-base)
