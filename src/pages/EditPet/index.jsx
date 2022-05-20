@@ -77,7 +77,7 @@ const EditPet = () => {
       })
       .then((res) => {
         toast.success("Alterações Salvas!");
-        history.push(`/adote/${petId}`);
+        history.goBack();
       })
       .catch((err) => {
         toast.error("Ops! Houve algum erro");
@@ -148,16 +148,14 @@ const EditPet = () => {
                 <AlertDialogOverlay>
                   <AlertDialogContent
                     mt="10rem"
-                    fontFamily="'Baloo Chettan 2', cursive"
-                  >
+                    fontFamily="'Baloo Chettan 2', cursive">
                     <AlertDialogHeader
                       fontWeight="bold"
                       bgColor="var(--color-icons)"
                       color="var(--color-seven)"
                       fontSize="1.3rem"
                       borderTopRightRadius="6px"
-                      borderTopLeftRadius="6px"
-                    >
+                      borderTopLeftRadius="6px">
                       Deletar
                     </AlertDialogHeader>
 
@@ -168,15 +166,13 @@ const EditPet = () => {
 
                     <AlertDialogFooter
                       display="flex"
-                      justifyContent="space-between"
-                    >
+                      justifyContent="space-between">
                       <ButtonOutlined onClick={onClose}>Cancel</ButtonOutlined>
                       <Button
                         colorScheme="red"
                         onClick={() => deletePet()}
                         ml={3}
-                        orangeSchema
-                      >
+                        orangeSchema>
                         Delete
                       </Button>
                     </AlertDialogFooter>
