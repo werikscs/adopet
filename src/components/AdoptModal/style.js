@@ -20,18 +20,12 @@ export const Container = styled.div`
     font-size: 1.25rem;
     font-weight: bold;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
     border-bottom: 1px solid #fff;
     padding: 10px 20px;
     height: 25%;
     color: #fff;
-
-    button {
-      background: none;
-      font-size: 1.5rem;
-      color: #fff;
-    }
   }
 
   section {

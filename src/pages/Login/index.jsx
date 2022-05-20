@@ -86,7 +86,7 @@ const Login = () => {
             error={errors.password?.message}
             register={register}
           />
-          {signinError !== "" ? <h4>{signinError}</h4> : <></>}
+          {/* {signinError !== "" ? <h4>{signinError}</h4> : <></>} */}
           <Button type="submit">Entrar</Button>
           <h3>
             Ainda não possui uma conta? <Link to="/cadastro">Cadastre-se</Link>
