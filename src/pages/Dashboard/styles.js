@@ -156,19 +156,6 @@ export const ContentList = styled.div`
       border-radius: 8px 8px 0 0;
     }
 
-    .pet-not-found {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      padding-top: 16px;
-
-      img {
-        width: fit-content;
-      }
-    }
-
     h1 {
       font-size: 1.5rem;
       font-weight: bold;
@@ -180,6 +167,19 @@ export const ContentList = styled.div`
       padding: 4px 8px;
       height: 35px;
       border: 2px solid white;
+    }
+  }
+
+  .pet-not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 35px;
+
+    img {
+      width: fit-content;
     }
   }
 

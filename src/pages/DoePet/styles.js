@@ -4,7 +4,7 @@ export const GenericContainer = styled.div`
   width: 100%;
   min-height: 100vh;
 
-  background-color: var(--color-second-50);
+  background-color: var(--color-fourth);
 
   display: flex;
   justify-content: center;
@@ -26,15 +26,13 @@ export const Main = styled.main`
 
   padding: 16px;
 
-  background-color: var(--color-second-50);
+  background-color: var(--color-fourth);
 
   h1 {
     width: 100%;
-
     text-align: center;
-
     font-size: 2.25rem;
-
+    font-weight: 700;
     color: var(--color-title);
 
     border-bottom: 1px solid var(--color-title-50);
@@ -61,5 +59,5 @@ export const DivButtons = styled.div`
   width: 100%;
   max-width: 768px;
 
-  background-color: var(--color-second-50);
+  background-color: var(--color-fourth);
 `;

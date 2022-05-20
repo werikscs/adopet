@@ -214,7 +214,7 @@ const Dashboard = () => {
           ) : (
             <div className="pet-not-found">
               <img src={petSad} alt="pet triste" />
-              <h2>Vocês ainda não cadastrou nenhum pet.</h2>
+              <h2>Você ainda não cadastrou nenhum pet.</h2>
             </div>
           )}
         </ContentList>

@@ -23,7 +23,7 @@ export const Main = styled.main`
 
   padding: 16px;
 
-  background-color: var(--color-second-50);
+  background-color: var(--color-fourth);
 `;
 
 export const Figcaption = styled.figcaption`
@@ -150,7 +150,7 @@ export const DivButtons = styled.div`
   width: 100%;
   max-width: 768px;
 
-  background-color: var(--color-second-50);
+  background-color: var(--color-fourth);
 
   button {
     line-height: 16px;
