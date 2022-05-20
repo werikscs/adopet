@@ -10,7 +10,6 @@ const WantAdopt = ({ handleClose, show, dataOwner }) => {
       <div className={showHideClassName}>
         <header>
           <p>Informações do dono</p>
-          <button onClick={handleClose}>X</button>
         </header>
         <section>
           <main>
