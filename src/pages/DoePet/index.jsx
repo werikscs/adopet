@@ -9,6 +9,7 @@ import api from "../../services/api";
 import Button from "../../components/Button";
 import ButtonOutlined from "../../components/ButtonOutlined";
 import InputInternal from "../../components/InputInternal";
+import FooterChat from "../../components/footer-Chat";
 
 import * as S from "./styles";
 import InputTextArea from "../../components/InputTextArea";
@@ -147,7 +148,7 @@ const DoePet = () => {
           />
 
           <S.DivButtons>
-            <ButtonOutlined type="button" callback={() => history.push("/")}>
+            <ButtonOutlined type="button" callback={() => history.goBack()}>
               voltar
             </ButtonOutlined>
             <Button type="submit" orangeSchema>
@@ -155,6 +156,7 @@ const DoePet = () => {
             </Button>
           </S.DivButtons>
         </S.Form>
+        <FooterChat />
       </S.Main>
     </S.GenericContainer>
   );

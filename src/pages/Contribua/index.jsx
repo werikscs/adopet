@@ -2,9 +2,12 @@ import catImg from "../../assets/gatinho-contribua.png";
 import caoSemDono from "../../assets/cao-sem-dono.webp";
 import quatroPatinhas from "../../assets/quatro-patinhas.webp";
 import projetoEsdras from "../../assets/projeto-esdras.webp";
+
 import SectionHomePart5 from "../../components/section-Home-Part5";
+
 import Footer from "../../components/Footer";
 import Button from "../../components/Button";
+
 import {
   Main,
   Section,
@@ -16,9 +19,7 @@ import {
   LiONGs,
 } from "./styles";
 
-// import { useHistory } from "react-router-dom";
 const Contribua = () => {
-  //   const history = useHistory();
   return (
     <Main>
       <Section>
@@ -58,14 +59,29 @@ const Contribua = () => {
               <img src={caoSemDono} alt="ONG Cão Sem Dono" />
               <div>
                 <h3>Cão Sem Dono</h3>
-                <Button orangeSchema={"orangeSchema"}>Ajudar</Button>
+                <Button orangeSchema={"orangeSchema"}>
+                  <a
+                    href="https://web.whatsapp.com/send?phone=5599111112222"
+                    target={"_blank"}
+                    rel="noreferrer">
+                    Ajudar
+                  </a>
+                </Button>
               </div>
             </LiONGs>
             <LiONGs>
               <img src={quatroPatinhas} alt="Associação Quatro Patinhas" />
               <div>
                 <h3>Ass. Quatro Patinhas</h3>
-                <Button orangeSchema={"orangeSchema"}>Ajudar</Button>
+
+                <Button orangeSchema={"orangeSchema"}>
+                  <a
+                    href="https://web.whatsapp.com/send?phone=5599111112222"
+                    target={"_blank"}
+                    rel="noreferrer">
+                    Ajudar
+                  </a>
+                </Button>
               </div>
             </LiONGs>
 
@@ -73,7 +89,14 @@ const Contribua = () => {
               <img src={projetoEsdras} alt="ONG Projeto Esdras" />
               <div>
                 <h3>Projeto Esdras</h3>
-                <Button orangeSchema={"orangeSchema"}>Ajudar</Button>
+                <Button orangeSchema={"orangeSchema"}>
+                  <a
+                    href="https://web.whatsapp.com/send?phone=5599111112222"
+                    target={"_blank"}
+                    rel="noreferrer">
+                    Ajudar
+                  </a>
+                </Button>
               </div>
             </LiONGs>
           </ContainerUl>

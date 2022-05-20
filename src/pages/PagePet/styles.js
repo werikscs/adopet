@@ -11,6 +11,7 @@ export const GenericContainer = styled.div`
 `;
 
 export const Main = styled.main`
+  margin-left: 5px;
   width: 90%;
   max-width: 768px;
   min-width: var(--min-width);
@@ -22,7 +23,7 @@ export const Main = styled.main`
 
   padding: 16px;
 
-  background-color: var(--color-second-50);
+  background-color: var(--color-fourth);
 `;
 
 export const Figcaption = styled.figcaption`
@@ -122,13 +123,19 @@ export const DivInfoPet = styled.div`
   gap: 14px;
 
   margin-bottom: 56px;
+  margin-left: 5px;
 
   h1 {
+    font-size: 2rem;
     text-transform: capitalize;
   }
 
+  h2 {
+    font-size: 1.25rem;
+  }
+
   span {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 `;
 
@@ -136,11 +143,20 @@ export const DivButtons = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
 
   padding: 16px 0;
 
   width: 100%;
   max-width: 768px;
 
-  background-color: var(--color-second-50);
+  background-color: var(--color-fourth);
+
+  button {
+    line-height: 16px;
+  }
+
+  button:nth-child(2) {
+    margin-left: auto;
+  }
 `;

@@ -41,6 +41,7 @@ export const Container = styled.div`
       color: var(--color-title);
       font-weight: 600;
       font-size: 1.1rem;
+      padding-left: 16px;
     }
 
     h3,
@@ -50,7 +51,8 @@ export const Container = styled.div`
     }
 
     h4 {
-      color: #fd3700;
+      font-size: 1.1rem;
+      color: var(--color-error-form);
     }
   }
 

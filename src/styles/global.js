@@ -35,20 +35,19 @@ export default createGlobalStyle`
     --color-toast-error: #e74c3c;
     --color-toast-success: #07bc0c;
 
+    --color-error-form: #6b1700;
+
     --max-width: 1440px;
     --min-width: 360px;
+
+    --toastify-color-light: #fff9f2;
+    --toastify-color-error: #FF6853;
 }
 
 html{
     overflow: unset;
 }
 
-#root{
-    /* width: 100%;
-    height: 100vh;
-    overflow-y: hidden;
-    position: relative; */
-}
 
 body, input, button, textarea{
     font-family: 'Hind', sans-serif;
@@ -69,4 +68,11 @@ button{
 button:hover{
     filter: brightness(90%);
 }
+
+.Toastify__toast-container{
+    position: fixed;
+    top: 116px;
+    z-index: 20;
+}
+
 `;

@@ -22,13 +22,20 @@ const Cadastro = () => {
       .required("Nome obrigatório")
       .min(3, "Mínimo 3 caracteres"),
     email: yup.string().required("Email obrigatório").email("E-mail inválido"),
+    phone: yup
+      .string()
+      .min(11, "Minimo 11 números")
+      .matches(
+        /^\(?[1-9]{2}\)? ?(?:[2-8]|9[1-9])[0-9]{3}\-?[0-9]{4}$/,
+        "Conter somente numeros"
+      ),
     password: yup
       .string()
       .required("Senha obrigatória")
       .min(6, "Mínimo 6 caracteres")
       .matches(
         /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{6,}$/,
-        "Senha deve conter uma letra maiúscula, um número e um símbolo"
+        "Senha deve conter uma letra maiúscula, um número e um desses símbolos($*&@#)"
       ),
     confirmPassword: yup
       .string()
@@ -44,7 +51,6 @@ const Cadastro = () => {
   });
 
   const onSubmit = (data) => {
-    console.log(data);
     axios({
       method: "post",
       url: `${BASE_URL}/register`,
@@ -58,17 +64,12 @@ const Cadastro = () => {
       },
     })
       .then((response) => {
-        // response.status === 201
-        //   ?history.push("/login")
-        //   : console.log(response);
-        console.log(response);
         toast.success("Cadastrado com sucesso");
         history.push("/login");
       })
       .catch((err) => {
-        console.log(err);
-        setSignupError(err.response.data);
         toast.error("Esse email já foi cadastrado");
+        setSignupError("Falha ao cadastrar ");
       });
   };
 
@@ -86,10 +87,18 @@ const Cadastro = () => {
         />
         <Input
           label="Email*"
-          type="email"
+          type="text"
           name="email"
           placeholder="Digite seu email"
           error={errors.email?.message}
+          register={register}
+        />
+        <Input
+          label="Telefone*"
+          type="text"
+          placeholder="Digite o Telefone"
+          name="phone"
+          error={errors.phone?.message}
           register={register}
         />
         <Input

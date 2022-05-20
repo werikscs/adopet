@@ -8,6 +8,7 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import PagePet from "../pages/PagePet";
 import Contribua from "../pages/Contribua";
+import EditPet from "../pages/EditPet";
 
 const Routers = () => {
   return (
@@ -49,6 +50,10 @@ const Routers = () => {
       {/* página com tela de cadastro de animal (somente logado) */}
       <Route exact path="/user/doe">
         <DoePet />
+      </Route>
+
+      <Route exact path="/user/pet/:id">
+        <EditPet />
       </Route>
     </Switch>
   );
